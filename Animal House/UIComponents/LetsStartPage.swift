@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-struct LetsStart: View {
+struct LetsStartPage: View {
     var body: some View {
         VStack {
             Spacer()
-            RoundedButton(title: "Commençons")
+            RoundedButton(title: "Let's Start")
             .offset(y: -20)
             .padding(.bottom, 20)
         }
@@ -23,7 +23,7 @@ struct LetsStart: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LetsStart()
+        LetsStartPage()
     }
 }
 #endif
