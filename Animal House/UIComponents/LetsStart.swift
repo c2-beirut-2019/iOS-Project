@@ -8,16 +8,22 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LetsStart: View {
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Spacer()
+            RoundedButton(title: "Commençons")
+            .offset(y: -20)
+            .padding(.bottom, 20)
+        }
     }
 }
+
 
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LetsStart()
     }
 }
 #endif

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4BC838F22F24889007F0EDB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BC838E22F24889007F0EDB /* RoundedButton.swift */; };
 		A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */; };
 		A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */; };
-		A4E4CDA422F23ACE00D1333E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA322F23ACE00D1333E /* ContentView.swift */; };
+		A4E4CDA422F23ACE00D1333E /* LetsStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA322F23ACE00D1333E /* LetsStart.swift */; };
 		A4E4CDA622F23AD100D1333E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA522F23AD100D1333E /* Assets.xcassets */; };
 		A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */; };
 		A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */; };
@@ -27,10 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4BC838E22F24889007F0EDB /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = "../../../../../System/Volumes/Data/Users/kodmus/Desktop/Animal House/Animal House/RoundedButton.swift"; sourceTree = "<group>"; };
 		A4E4CD9C22F23ACE00D1333E /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4E4CDA322F23ACE00D1333E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4E4CDA322F23ACE00D1333E /* LetsStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsStart.swift; sourceTree = "<group>"; };
 		A4E4CDA522F23AD100D1333E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4E4CDAB22F23AD100D1333E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4BC839022F248A9007F0EDB /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4CDA322F23ACE00D1333E /* LetsStart.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		A4E4CD9322F23ACE00D1333E = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +91,8 @@
 			children = (
 				A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */,
 				A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */,
-				A4E4CDA322F23ACE00D1333E /* ContentView.swift */,
+				A4BC839022F248A9007F0EDB /* UIComponents */,
+				A4BC838E22F24889007F0EDB /* RoundedButton.swift */,
 				A4E4CDA522F23AD100D1333E /* Assets.xcassets */,
 				A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */,
 				A4E4CDAD22F23AD100D1333E /* Info.plist */,
@@ -210,7 +221,8 @@
 			files = (
 				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
 				A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */,
-				A4E4CDA422F23ACE00D1333E /* ContentView.swift in Sources */,
+				A4E4CDA422F23ACE00D1333E /* LetsStart.swift in Sources */,
+				A4BC838F22F24889007F0EDB /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
