@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */; };
+		A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */; };
+		A4E4CDA422F23ACE00D1333E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA322F23ACE00D1333E /* ContentView.swift */; };
+		A4E4CDA622F23AD100D1333E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA522F23AD100D1333E /* Assets.xcassets */; };
+		A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */; };
+		A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */; };
+		A4E4CDB722F23AD100D1333E /* Animal_HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDB622F23AD100D1333E /* Animal_HouseTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4E4CDB322F23AD100D1333E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4E4CD9422F23ACE00D1333E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4E4CD9B22F23ACE00D1333E;
+			remoteInfo = "Animal House";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A4E4CD9C22F23ACE00D1333E /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A4E4CDA322F23ACE00D1333E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4E4CDA522F23AD100D1333E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4E4CDAB22F23AD100D1333E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4E4CDAD22F23AD100D1333E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E4CDB222F23AD100D1333E /* Animal HouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Animal HouseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E4CDB622F23AD100D1333E /* Animal_HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal_HouseTests.swift; sourceTree = "<group>"; };
+		A4E4CDB822F23AD100D1333E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4E4CD9922F23ACE00D1333E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E4CDAF22F23AD100D1333E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4E4CD9322F23ACE00D1333E = {
+			isa = PBXGroup;
+			children = (
+				A4E4CD9E22F23ACE00D1333E /* Animal House */,
+				A4E4CDB522F23AD100D1333E /* Animal HouseTests */,
+				A4E4CD9D22F23ACE00D1333E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4E4CD9D22F23ACE00D1333E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4CD9C22F23ACE00D1333E /* Animal House.app */,
+				A4E4CDB222F23AD100D1333E /* Animal HouseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4E4CD9E22F23ACE00D1333E /* Animal House */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */,
+				A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */,
+				A4E4CDA322F23ACE00D1333E /* ContentView.swift */,
+				A4E4CDA522F23AD100D1333E /* Assets.xcassets */,
+				A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */,
+				A4E4CDAD22F23AD100D1333E /* Info.plist */,
+				A4E4CDA722F23AD100D1333E /* Preview Content */,
+			);
+			path = "Animal House";
+			sourceTree = "<group>";
+		};
+		A4E4CDA722F23AD100D1333E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A4E4CDB522F23AD100D1333E /* Animal HouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4E4CDB622F23AD100D1333E /* Animal_HouseTests.swift */,
+				A4E4CDB822F23AD100D1333E /* Info.plist */,
+			);
+			path = "Animal HouseTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4E4CD9B22F23ACE00D1333E /* Animal House */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E4CDBB22F23AD100D1333E /* Build configuration list for PBXNativeTarget "Animal House" */;
+			buildPhases = (
+				A4E4CD9822F23ACE00D1333E /* Sources */,
+				A4E4CD9922F23ACE00D1333E /* Frameworks */,
+				A4E4CD9A22F23ACE00D1333E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Animal House";
+			productName = "Animal House";
+			productReference = A4E4CD9C22F23ACE00D1333E /* Animal House.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4E4CDB122F23AD100D1333E /* Animal HouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E4CDBE22F23AD100D1333E /* Build configuration list for PBXNativeTarget "Animal HouseTests" */;
+			buildPhases = (
+				A4E4CDAE22F23AD100D1333E /* Sources */,
+				A4E4CDAF22F23AD100D1333E /* Frameworks */,
+				A4E4CDB022F23AD100D1333E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4E4CDB422F23AD100D1333E /* PBXTargetDependency */,
+			);
+			name = "Animal HouseTests";
+			productName = "Animal HouseTests";
+			productReference = A4E4CDB222F23AD100D1333E /* Animal HouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4E4CD9422F23ACE00D1333E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Roy Geagea";
+				TargetAttributes = {
+					A4E4CD9B22F23ACE00D1333E = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					A4E4CDB122F23AD100D1333E = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = A4E4CD9B22F23ACE00D1333E;
+					};
+				};
+			};
+			buildConfigurationList = A4E4CD9722F23ACE00D1333E /* Build configuration list for PBXProject "Animal House" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4E4CD9322F23ACE00D1333E;
+			productRefGroup = A4E4CD9D22F23ACE00D1333E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4E4CD9B22F23ACE00D1333E /* Animal House */,
+				A4E4CDB122F23AD100D1333E /* Animal HouseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4E4CD9A22F23ACE00D1333E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */,
+				A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */,
+				A4E4CDA622F23AD100D1333E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E4CDB022F23AD100D1333E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4E4CD9822F23ACE00D1333E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
+				A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */,
+				A4E4CDA422F23ACE00D1333E /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E4CDAE22F23AD100D1333E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E4CDB722F23AD100D1333E /* Animal_HouseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4E4CDB422F23AD100D1333E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4E4CD9B22F23ACE00D1333E /* Animal House */;
+			targetProxy = A4E4CDB322F23AD100D1333E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4E4CDAB22F23AD100D1333E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4E4CDB922F23AD100D1333E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4E4CDBA22F23AD100D1333E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4E4CDBC22F23AD100D1333E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Animal House\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = 542GN2GUUD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Animal House/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isae.roygeagea.Animal-House";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4E4CDBD22F23AD100D1333E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Animal House\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = 542GN2GUUD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Animal House/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isae.roygeagea.Animal-House";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A4E4CDBF22F23AD100D1333E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 542GN2GUUD;
+				INFOPLIST_FILE = "Animal HouseTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isae.roygeagea.Animal-HouseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Animal House.app/Animal House";
+			};
+			name = Debug;
+		};
+		A4E4CDC022F23AD100D1333E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 542GN2GUUD;
+				INFOPLIST_FILE = "Animal HouseTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.isae.roygeagea.Animal-HouseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Animal House.app/Animal House";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4E4CD9722F23ACE00D1333E /* Build configuration list for PBXProject "Animal House" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E4CDB922F23AD100D1333E /* Debug */,
+				A4E4CDBA22F23AD100D1333E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E4CDBB22F23AD100D1333E /* Build configuration list for PBXNativeTarget "Animal House" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E4CDBC22F23AD100D1333E /* Debug */,
+				A4E4CDBD22F23AD100D1333E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E4CDBE22F23AD100D1333E /* Build configuration list for PBXNativeTarget "Animal HouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E4CDBF22F23AD100D1333E /* Debug */,
+				A4E4CDC022F23AD100D1333E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4E4CD9422F23ACE00D1333E /* Project object */;
+}
