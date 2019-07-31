@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A49A885722F256D7006F6EA3 /* AccessTokenPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49A885622F256D7006F6EA3 /* AccessTokenPage.swift */; };
 		A4BC838F22F24889007F0EDB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BC838E22F24889007F0EDB /* RoundedButton.swift */; };
+		A4BCAB5122F25D8700A6D0B1 /* CredentialsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BCAB5022F25D8700A6D0B1 /* CredentialsPage.swift */; };
 		A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */; };
 		A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */; };
 		A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		A49A885622F256D7006F6EA3 /* AccessTokenPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessTokenPage.swift; path = "../../../../../../System/Volumes/Data/Users/kodmus/Desktop/Animal House/Animal House/UIComponents/AccessTokenPage.swift"; sourceTree = "<group>"; };
 		A4BC838E22F24889007F0EDB /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = "../../../../../System/Volumes/Data/Users/kodmus/Desktop/Animal House/Animal House/RoundedButton.swift"; sourceTree = "<group>"; };
+		A4BCAB5022F25D8700A6D0B1 /* CredentialsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CredentialsPage.swift; path = "../../../../../../System/Volumes/Data/Users/kodmus/Desktop/Animal House/Animal House/UIComponents/CredentialsPage.swift"; sourceTree = "<group>"; };
 		A4E4CD9C22F23ACE00D1333E /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */,
 				A49A885622F256D7006F6EA3 /* AccessTokenPage.swift */,
+				A4BCAB5022F25D8700A6D0B1 /* CredentialsPage.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
+				A4BCAB5122F25D8700A6D0B1 /* CredentialsPage.swift in Sources */,
 				A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */,
 				A49A885722F256D7006F6EA3 /* AccessTokenPage.swift in Sources */,
 				A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */,
