@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Animal_House
+//@testable import Animal_House
 
 class Animal_HouseTests: XCTestCase {
 

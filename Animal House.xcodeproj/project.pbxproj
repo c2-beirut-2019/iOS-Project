@@ -3,13 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A411D67A22FB686500CCD600 /* test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A411D67922FB686500CCD600 /* test.jpeg */; };
+		A411D67D22FB6DE800CCD600 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = A411D67C22FB6DE800CCD600 /* URLImage */; };
+		A411D68022FB73E700CCD600 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A411D67E22FB73E700CCD600 /* News.swift */; };
+		A411D68122FB73E700CCD600 /* ServerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A411D67F22FB73E700CCD600 /* ServerImage.swift */; };
 		A43F272B22FA2B9900F21B70 /* AccessTokenPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */; };
 		A43F272C22FA2B9900F21B70 /* CredentialsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F272922FA2B9900F21B70 /* CredentialsPage.swift */; };
 		A43F273222FA2C5600F21B70 /* ChooseUserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */; };
+		A43F273922FB64C500F21B70 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273022FA2C0400F21B70 /* RoundedButton.swift */; };
+		A43F273B22FB64DF00F21B70 /* NewsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273A22FB64DF00F21B70 /* NewsPage.swift */; };
+		A43F273D22FB655B00F21B70 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273C22FB655B00F21B70 /* NewsView.swift */; };
 		A44221A922F39C300052F131 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219322F39C300052F131 /* ParameterEncoding.swift */; };
 		A44221AA22F39C300052F131 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219422F39C300052F131 /* URLParameterEncoding.swift */; };
 		A44221AB22F39C300052F131 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219522F39C300052F131 /* JSONParameterEncoder.swift */; };
@@ -20,7 +27,6 @@
 		A44221B022F39C300052F131 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219C22F39C300052F131 /* NetworkLogger.swift */; };
 		A44221B122F39C300052F131 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219D22F39C300052F131 /* EndPointType.swift */; };
 		A44221B422F39CFE0052F131 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44221B322F39CFE0052F131 /* Data.swift */; };
-		A4BC838F22F24889007F0EDB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BC838E22F24889007F0EDB /* RoundedButton.swift */; };
 		A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */; };
 		A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */; };
 		A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */; };
@@ -41,10 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A411D67922FB686500CCD600 /* test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpeg; sourceTree = "<group>"; };
+		A411D67E22FB73E700CCD600 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		A411D67F22FB73E700CCD600 /* ServerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerImage.swift; sourceTree = "<group>"; };
 		A43F272922FA2B9900F21B70 /* CredentialsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsPage.swift; sourceTree = "<group>"; };
 		A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenPage.swift; sourceTree = "<group>"; };
 		A43F273022FA2C0400F21B70 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUserPage.swift; sourceTree = "<group>"; };
+		A43F273A22FB64DF00F21B70 /* NewsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPage.swift; sourceTree = "<group>"; };
+		A43F273C22FB655B00F21B70 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		A442219322F39C300052F131 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		A442219422F39C300052F131 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		A442219522F39C300052F131 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -55,7 +66,6 @@
 		A442219C22F39C300052F131 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		A442219D22F39C300052F131 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		A44221B322F39CFE0052F131 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		A4BC838E22F24889007F0EDB /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = "../../../../../System/Volumes/Data/Users/kodmus/Desktop/Animal House/Animal House/RoundedButton.swift"; sourceTree = "<group>"; };
 		A4E4CD9C22F23ACE00D1333E /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A411D67D22FB6DE800CCD600 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +98,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A411D68222FB73EA00CCD600 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A411D67E22FB73E700CCD600 /* News.swift */,
+				A411D67F22FB73E700CCD600 /* ServerImage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A43F272D22FA2BEB00F21B70 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				A43F273A22FB64DF00F21B70 /* NewsPage.swift */,
 				A43F272E22FA2BF700F21B70 /* SignUp */,
 			);
 			path = Pages;
@@ -110,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				A43F273022FA2C0400F21B70 /* RoundedButton.swift */,
+				A43F273C22FB655B00F21B70 /* NewsView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -193,11 +215,12 @@
 			children = (
 				A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */,
 				A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */,
+				A411D68222FB73EA00CCD600 /* Models */,
+				A411D67922FB686500CCD600 /* test.jpeg */,
 				A43F272D22FA2BEB00F21B70 /* Pages */,
 				A44221B222F39CDD0052F131 /* Extensions */,
 				A442218522F39C300052F131 /* Networking */,
 				A43F272F22FA2C0400F21B70 /* UIComponents */,
-				A4BC838E22F24889007F0EDB /* RoundedButton.swift */,
 				A4E4CDA522F23AD100D1333E /* Assets.xcassets */,
 				A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */,
 				A4E4CDAD22F23AD100D1333E /* Info.plist */,
@@ -239,6 +262,9 @@
 			dependencies = (
 			);
 			name = "Animal House";
+			packageProductDependencies = (
+				A411D67C22FB6DE800CCD600 /* URLImage */,
+			);
 			productName = "Animal House";
 			productReference = A4E4CD9C22F23ACE00D1333E /* Animal House.app */;
 			productType = "com.apple.product-type.application";
@@ -267,6 +293,9 @@
 		A4E4CD9422F23ACE00D1333E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Roy Geagea";
@@ -289,6 +318,9 @@
 				Base,
 			);
 			mainGroup = A4E4CD9322F23ACE00D1333E;
+			packageReferences = (
+				A411D67B22FB6DE800CCD600 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = A4E4CD9D22F23ACE00D1333E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -305,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */,
+				A411D67A22FB686500CCD600 /* test.jpeg in Resources */,
 				A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */,
 				A4E4CDA622F23AD100D1333E /* Assets.xcassets in Resources */,
 			);
@@ -331,15 +364,19 @@
 				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
 				A44221AC22F39C300052F131 /* NetworkManager.swift in Sources */,
 				A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */,
+				A411D68122FB73E700CCD600 /* ServerImage.swift in Sources */,
 				A44221AA22F39C300052F131 /* URLParameterEncoding.swift in Sources */,
+				A43F273D22FB655B00F21B70 /* NewsView.swift in Sources */,
 				A44221AF22F39C300052F131 /* Router.swift in Sources */,
 				A44221AD22F39C300052F131 /* HTTPTask.swift in Sources */,
 				A44221B022F39C300052F131 /* NetworkLogger.swift in Sources */,
 				A44221AE22F39C300052F131 /* HTTPMethod.swift in Sources */,
 				A43F273222FA2C5600F21B70 /* ChooseUserPage.swift in Sources */,
+				A43F273B22FB64DF00F21B70 /* NewsPage.swift in Sources */,
+				A43F273922FB64C500F21B70 /* RoundedButton.swift in Sources */,
 				A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */,
 				A43F272B22FA2B9900F21B70 /* AccessTokenPage.swift in Sources */,
-				A4BC838F22F24889007F0EDB /* RoundedButton.swift in Sources */,
+				A411D68022FB73E700CCD600 /* News.swift in Sources */,
 				A44221B422F39CFE0052F131 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +638,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A411D67B22FB6DE800CCD600 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A411D67C22FB6DE800CCD600 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A411D67B22FB6DE800CCD600 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4E4CD9422F23ACE00D1333E /* Project object */;
 }
