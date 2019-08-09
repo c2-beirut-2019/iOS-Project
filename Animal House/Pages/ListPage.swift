@@ -8,12 +8,14 @@
 
 import SwiftUI
 
-struct NewsPage: View {
+struct ListPage: View {
     var body: some View {
         NavigationView {
             List {
-                 NewsView()
-                 NewsView()
+                 NewsCellView()
+                 NewsCellView()
+                 DoctorCellView()
+                 DoctorCellView()
              }
             .navigationBarTitle(Text("News"))
         }
@@ -21,9 +23,9 @@ struct NewsPage: View {
 }
 
 #if DEBUG
-struct NewsPage_Previews: PreviewProvider {
+struct ListPage_Previews: PreviewProvider {
     static var previews: some View {
-        NewsPage()
+        ListPage()
     }
 }
 #endif

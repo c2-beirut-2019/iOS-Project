@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct NewsView: View {
+struct NewsCellView: View {
         
     var body: some View {
         HStack() {
@@ -30,7 +30,7 @@ struct NewsView: View {
                 Text("Date")
                 .offset(x: 0, y: -30)
             }
-            .padding()
+            .padding(.horizontal, 8)
         }
     }
 }
@@ -38,7 +38,7 @@ struct NewsView: View {
 #if DEBUG
 struct NewsView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsView()
+        NewsCellView()
     }
 
 }

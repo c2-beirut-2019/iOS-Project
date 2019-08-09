@@ -15,8 +15,7 @@
 		A43F272C22FA2B9900F21B70 /* CredentialsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F272922FA2B9900F21B70 /* CredentialsPage.swift */; };
 		A43F273222FA2C5600F21B70 /* ChooseUserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */; };
 		A43F273922FB64C500F21B70 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273022FA2C0400F21B70 /* RoundedButton.swift */; };
-		A43F273B22FB64DF00F21B70 /* NewsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273A22FB64DF00F21B70 /* NewsPage.swift */; };
-		A43F273D22FB655B00F21B70 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273C22FB655B00F21B70 /* NewsView.swift */; };
+		A43F273D22FB655B00F21B70 /* NewsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273C22FB655B00F21B70 /* NewsCellView.swift */; };
 		A44221A922F39C300052F131 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219322F39C300052F131 /* ParameterEncoding.swift */; };
 		A44221AA22F39C300052F131 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219422F39C300052F131 /* URLParameterEncoding.swift */; };
 		A44221AB22F39C300052F131 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219522F39C300052F131 /* JSONParameterEncoder.swift */; };
@@ -27,6 +26,7 @@
 		A44221B022F39C300052F131 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219C22F39C300052F131 /* NetworkLogger.swift */; };
 		A44221B122F39C300052F131 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219D22F39C300052F131 /* EndPointType.swift */; };
 		A44221B422F39CFE0052F131 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44221B322F39CFE0052F131 /* Data.swift */; };
+		A47D6C1222FCFB5100C9FFA1 /* DoctorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47D6C1122FCFB5100C9FFA1 /* DoctorCellView.swift */; };
 		A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */; };
 		A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */; };
 		A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */; };
@@ -34,6 +34,7 @@
 		A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */; };
 		A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */; };
 		A4E4CDB722F23AD100D1333E /* Animal_HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDB622F23AD100D1333E /* Animal_HouseTests.swift */; };
+		A4FAF46722FCFD4E009358AC /* ListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FAF46622FCFD4E009358AC /* ListPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +55,7 @@
 		A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenPage.swift; sourceTree = "<group>"; };
 		A43F273022FA2C0400F21B70 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseUserPage.swift; sourceTree = "<group>"; };
-		A43F273A22FB64DF00F21B70 /* NewsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPage.swift; sourceTree = "<group>"; };
-		A43F273C22FB655B00F21B70 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		A43F273C22FB655B00F21B70 /* NewsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellView.swift; sourceTree = "<group>"; };
 		A442219322F39C300052F131 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		A442219422F39C300052F131 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		A442219522F39C300052F131 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -66,6 +66,7 @@
 		A442219C22F39C300052F131 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		A442219D22F39C300052F131 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		A44221B322F39CFE0052F131 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A47D6C1122FCFB5100C9FFA1 /* DoctorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCellView.swift; sourceTree = "<group>"; };
 		A4E4CD9C22F23ACE00D1333E /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		A4E4CDB222F23AD100D1333E /* Animal HouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Animal HouseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4CDB622F23AD100D1333E /* Animal_HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal_HouseTests.swift; sourceTree = "<group>"; };
 		A4E4CDB822F23AD100D1333E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4FAF46622FCFD4E009358AC /* ListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,7 @@
 		A43F272D22FA2BEB00F21B70 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				A43F273A22FB64DF00F21B70 /* NewsPage.swift */,
+				A4FAF46622FCFD4E009358AC /* ListPage.swift */,
 				A43F272E22FA2BF700F21B70 /* SignUp */,
 			);
 			path = Pages;
@@ -131,7 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				A43F273022FA2C0400F21B70 /* RoundedButton.swift */,
-				A43F273C22FB655B00F21B70 /* NewsView.swift */,
+				A43F273C22FB655B00F21B70 /* NewsCellView.swift */,
+				A47D6C1122FCFB5100C9FFA1 /* DoctorCellView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -361,18 +364,19 @@
 				A43F272C22FA2B9900F21B70 /* CredentialsPage.swift in Sources */,
 				A44221A922F39C300052F131 /* ParameterEncoding.swift in Sources */,
 				A44221B122F39C300052F131 /* EndPointType.swift in Sources */,
+				A4FAF46722FCFD4E009358AC /* ListPage.swift in Sources */,
+				A47D6C1222FCFB5100C9FFA1 /* DoctorCellView.swift in Sources */,
 				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
 				A44221AC22F39C300052F131 /* NetworkManager.swift in Sources */,
 				A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */,
 				A411D68122FB73E700CCD600 /* ServerImage.swift in Sources */,
 				A44221AA22F39C300052F131 /* URLParameterEncoding.swift in Sources */,
-				A43F273D22FB655B00F21B70 /* NewsView.swift in Sources */,
+				A43F273D22FB655B00F21B70 /* NewsCellView.swift in Sources */,
 				A44221AF22F39C300052F131 /* Router.swift in Sources */,
 				A44221AD22F39C300052F131 /* HTTPTask.swift in Sources */,
 				A44221B022F39C300052F131 /* NetworkLogger.swift in Sources */,
 				A44221AE22F39C300052F131 /* HTTPMethod.swift in Sources */,
 				A43F273222FA2C5600F21B70 /* ChooseUserPage.swift in Sources */,
-				A43F273B22FB64DF00F21B70 /* NewsPage.swift in Sources */,
 				A43F273922FB64C500F21B70 /* RoundedButton.swift in Sources */,
 				A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */,
 				A43F272B22FA2B9900F21B70 /* AccessTokenPage.swift in Sources */,
