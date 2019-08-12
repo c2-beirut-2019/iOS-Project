@@ -25,6 +25,7 @@
 		A44221B022F39C300052F131 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219C22F39C300052F131 /* NetworkLogger.swift */; };
 		A44221B122F39C300052F131 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219D22F39C300052F131 /* EndPointType.swift */; };
 		A44221B422F39CFE0052F131 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44221B322F39CFE0052F131 /* Data.swift */; };
+		A460A26723017F5300980386 /* NewDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460A26623017F5300980386 /* NewDetailsPage.swift */; };
 		A47ACF0222FE332A0005D760 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0122FE332A0005D760 /* ProfileImageView.swift */; };
 		A47ACF0422FE34190005D760 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0322FE34190005D760 /* InputTextField.swift */; };
 		A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */; };
@@ -70,6 +71,7 @@
 		A442219C22F39C300052F131 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		A442219D22F39C300052F131 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		A44221B322F39CFE0052F131 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		A460A26623017F5300980386 /* NewDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailsPage.swift; sourceTree = "<group>"; };
 		A47ACF0122FE332A0005D760 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		A47ACF0322FE34190005D760 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				A4FAF46622FCFD4E009358AC /* ListPage.swift */,
 				A47ACF0722FE3A850005D760 /* ProfilePage.swift */,
+				A460A26623017F5300980386 /* NewDetailsPage.swift */,
 				A43F272E22FA2BF700F21B70 /* SignUp */,
 			);
 			path = Pages;
@@ -382,6 +385,7 @@
 				A44221AC22F39C300052F131 /* NetworkManager.swift in Sources */,
 				A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */,
 				A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */,
+				A460A26723017F5300980386 /* NewDetailsPage.swift in Sources */,
 				A411D68122FB73E700CCD600 /* ServerImage.swift in Sources */,
 				A44221AA22F39C300052F131 /* URLParameterEncoding.swift in Sources */,
 				A43F273D22FB655B00F21B70 /* NewsCellView.swift in Sources */,
