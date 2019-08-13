@@ -28,6 +28,7 @@
 		A460A26723017F5300980386 /* NewDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460A26623017F5300980386 /* NewDetailsPage.swift */; };
 		A46321422303578D0063B9F9 /* PetAdoptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46321412303578D0063B9F9 /* PetAdoptView.swift */; };
 		A463214423035B020063B9F9 /* LineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463214323035B020063B9F9 /* LineInfoView.swift */; };
+		A4632146230365280063B9F9 /* AHTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4632145230365280063B9F9 /* AHTabbedView.swift */; };
 		A47ACF0222FE332A0005D760 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0122FE332A0005D760 /* ProfileImageView.swift */; };
 		A47ACF0422FE34190005D760 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0322FE34190005D760 /* InputTextField.swift */; };
 		A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */; };
@@ -76,6 +77,8 @@
 		A460A26623017F5300980386 /* NewDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailsPage.swift; sourceTree = "<group>"; };
 		A46321412303578D0063B9F9 /* PetAdoptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAdoptView.swift; sourceTree = "<group>"; };
 		A463214323035B020063B9F9 /* LineInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoView.swift; sourceTree = "<group>"; };
+		A4632145230365280063B9F9 /* AHTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHTabbedView.swift; sourceTree = "<group>"; };
+		A4632147230366BF0063B9F9 /* Animal House.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Animal House.entitlements"; sourceTree = "<group>"; };
 		A47ACF0122FE332A0005D760 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		A47ACF0322FE34190005D760 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
@@ -157,6 +160,7 @@
 				A4E0255C22FE3FE800B3F443 /* CustomDatePicker.swift */,
 				A46321412303578D0063B9F9 /* PetAdoptView.swift */,
 				A463214323035B020063B9F9 /* LineInfoView.swift */,
+				A4632145230365280063B9F9 /* AHTabbedView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -238,6 +242,7 @@
 		A4E4CD9E22F23ACE00D1333E /* Animal House */ = {
 			isa = PBXGroup;
 			children = (
+				A4632147230366BF0063B9F9 /* Animal House.entitlements */,
 				A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */,
 				A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */,
 				A411D68222FB73EA00CCD600 /* Models */,
@@ -404,6 +409,7 @@
 				A47ACF0222FE332A0005D760 /* ProfileImageView.swift in Sources */,
 				A463214423035B020063B9F9 /* LineInfoView.swift in Sources */,
 				A43F273222FA2C5600F21B70 /* ChooseUserPage.swift in Sources */,
+				A4632146230365280063B9F9 /* AHTabbedView.swift in Sources */,
 				A43F273922FB64C500F21B70 /* RoundedButton.swift in Sources */,
 				A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */,
 				A43F272B22FA2B9900F21B70 /* AccessTokenPage.swift in Sources */,
@@ -561,7 +567,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Animal House/Animal House.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Animal House\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = 542GN2GUUD;
 				ENABLE_PREVIEWS = YES;
@@ -572,6 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.isae.roygeagea.Animal-House";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -581,7 +590,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Animal House/Animal House.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Animal House\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = 542GN2GUUD;
 				ENABLE_PREVIEWS = YES;
@@ -592,6 +603,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.isae.roygeagea.Animal-House";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
