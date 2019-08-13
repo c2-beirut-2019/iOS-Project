@@ -12,10 +12,11 @@ struct ListPage: View {
     var body: some View {
         NavigationView {
             List {
-                 NewsCellView()
-                 NewsCellView()
-                 DoctorCellView()
-                 DoctorCellView()
+                NewsCellView()
+                NewsCellView()
+                DoctorCellView()
+                DoctorCellView()
+                PetAdoptView()
              }
             .navigationBarTitle(Text("News"))
         }

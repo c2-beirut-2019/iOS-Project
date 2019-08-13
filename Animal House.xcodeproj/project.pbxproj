@@ -26,6 +26,8 @@
 		A44221B122F39C300052F131 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219D22F39C300052F131 /* EndPointType.swift */; };
 		A44221B422F39CFE0052F131 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44221B322F39CFE0052F131 /* Data.swift */; };
 		A460A26723017F5300980386 /* NewDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460A26623017F5300980386 /* NewDetailsPage.swift */; };
+		A46321422303578D0063B9F9 /* PetAdoptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46321412303578D0063B9F9 /* PetAdoptView.swift */; };
+		A463214423035B020063B9F9 /* LineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463214323035B020063B9F9 /* LineInfoView.swift */; };
 		A47ACF0222FE332A0005D760 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0122FE332A0005D760 /* ProfileImageView.swift */; };
 		A47ACF0422FE34190005D760 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0322FE34190005D760 /* InputTextField.swift */; };
 		A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */; };
@@ -72,6 +74,8 @@
 		A442219D22F39C300052F131 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		A44221B322F39CFE0052F131 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A460A26623017F5300980386 /* NewDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailsPage.swift; sourceTree = "<group>"; };
+		A46321412303578D0063B9F9 /* PetAdoptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAdoptView.swift; sourceTree = "<group>"; };
+		A463214323035B020063B9F9 /* LineInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoView.swift; sourceTree = "<group>"; };
 		A47ACF0122FE332A0005D760 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		A47ACF0322FE34190005D760 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				A47ACF0322FE34190005D760 /* InputTextField.swift */,
 				A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */,
 				A4E0255C22FE3FE800B3F443 /* CustomDatePicker.swift */,
+				A46321412303578D0063B9F9 /* PetAdoptView.swift */,
+				A463214323035B020063B9F9 /* LineInfoView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
 				A44221AC22F39C300052F131 /* NetworkManager.swift in Sources */,
 				A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */,
+				A46321422303578D0063B9F9 /* PetAdoptView.swift in Sources */,
 				A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */,
 				A460A26723017F5300980386 /* NewDetailsPage.swift in Sources */,
 				A411D68122FB73E700CCD600 /* ServerImage.swift in Sources */,
@@ -395,6 +402,7 @@
 				A44221AE22F39C300052F131 /* HTTPMethod.swift in Sources */,
 				A47ACF0422FE34190005D760 /* InputTextField.swift in Sources */,
 				A47ACF0222FE332A0005D760 /* ProfileImageView.swift in Sources */,
+				A463214423035B020063B9F9 /* LineInfoView.swift in Sources */,
 				A43F273222FA2C5600F21B70 /* ChooseUserPage.swift in Sources */,
 				A43F273922FB64C500F21B70 /* RoundedButton.swift in Sources */,
 				A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */,
