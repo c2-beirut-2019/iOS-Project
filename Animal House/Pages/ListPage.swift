@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ListPage: View {
+    
     var body: some View {
         NavigationView {
             List {

@@ -7,13 +7,14 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct NewsCellView: View {
         
     var body: some View {
         NavigationLink(destination: NewDetailsPage()) {
             HStack() {
-                Image(uiImage: UIImage(imageLiteralResourceName: "test.jpeg"))
+                URLImage(URL(string: "https://cdn.pixabay.com/photo/2017/08/06/01/29/fence-2587475_1280.jpg")!, placeholder: Image(systemName: "circle"))
                     .resizable()
                     .frame(width: 90, height: 90)
                     .padding(.vertical, 8)

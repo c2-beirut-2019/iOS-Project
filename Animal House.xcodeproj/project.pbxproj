@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,7 @@
 		A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */; };
 		A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */; };
 		A4E4CDB722F23AD100D1333E /* Animal_HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDB622F23AD100D1333E /* Animal_HouseTests.swift */; };
+		A4F44F4B23046E1A00F345BB /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = A4F44F4A23046E1A00F345BB /* URLImage */; };
 		A4FAF46722FCFD4E009358AC /* ListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FAF46622FCFD4E009358AC /* ListPage.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F44F4B23046E1A00F345BB /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +295,7 @@
 			);
 			name = "Animal House";
 			packageProductDependencies = (
+				A4F44F4A23046E1A00F345BB /* URLImage */,
 			);
 			productName = "Animal House";
 			productReference = A4E4CD9C22F23ACE00D1333E /* Animal House.app */;
@@ -348,6 +351,7 @@
 			);
 			mainGroup = A4E4CD9322F23ACE00D1333E;
 			packageReferences = (
+				A4F44F4923046E1A00F345BB /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = A4E4CD9D22F23ACE00D1333E /* Products */;
 			projectDirPath = "";
@@ -574,6 +578,7 @@
 				DEVELOPMENT_TEAM = 542GN2GUUD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Animal House/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,6 +602,7 @@
 				DEVELOPMENT_TEAM = 542GN2GUUD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Animal House/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -682,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4F44F4923046E1A00F345BB /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4F44F4A23046E1A00F345BB /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4F44F4923046E1A00F345BB /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4E4CD9422F23ACE00D1333E /* Project object */;
 }
