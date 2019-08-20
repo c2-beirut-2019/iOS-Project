@@ -7,25 +7,32 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct NewDetailsPage: View {
+    
+    var news: NewsModel!
+    
     var body: some View {
         ScrollView {
             VStack {
-                Image(uiImage: UIImage(imageLiteralResourceName: "test.jpeg"))
+                    URLImage(URL(string: news.image!)!, placeholder: Image(systemName: "circle"))
+                    .resizable()
+                        .frame(height: 200, alignment: .top)
                 VStack(alignment: .trailing) {
-                    Text("date")
+                    Text(self.news.formatedDate!)
                     .padding(10)
                 }
                 VStack(alignment: .leading) {
-                    Text("Title")
+                    Text(self.news.title ?? "")
                     .font(.headline)
-                    Text("content")
+                    Text(self.news.content ?? "")
                     .font(.subheadline)
                 }
                 Spacer()
             }
         }
+        .navigationBarTitle(Text("Details"), displayMode: .inline)
     }
 }
 

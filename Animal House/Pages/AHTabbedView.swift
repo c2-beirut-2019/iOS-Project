@@ -13,12 +13,12 @@ struct AHTabbedView: View {
      
      var body: some View {
             TabView {
-                ListPage()
+                NewsListPage(viewModel: NewsListViewViewModel())
                 .tabItem {
                     Image(systemName: "1.square.fill")
                     Text("First")
                 }
-                ListPage()
+                NewsListPage(viewModel: NewsListViewViewModel())
                 .tabItem {
                     Image(systemName: "2.square.fill")
                     Text("Second")
