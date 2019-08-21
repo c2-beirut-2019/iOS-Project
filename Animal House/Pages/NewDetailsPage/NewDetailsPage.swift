@@ -16,21 +16,36 @@ struct NewDetailsPage: View {
     var body: some View {
         ScrollView {
             VStack {
-                    URLImage(URL(string: news.image!)!, placeholder: Image(systemName: "circle"))
+                URLImage(URL(string: news.image!)!, placeholder: Image(systemName: "circle"))
                     .resizable()
-                        .frame(height: 200, alignment: .top)
-                VStack(alignment: .trailing) {
+                    .aspectRatio(2, contentMode: .fill)
+                    .clipped()
+                HStack {
+                    Spacer()
                     Text(self.news.formatedDate!)
+                    .font(.caption)
                     .padding(10)
                 }
                 VStack(alignment: .leading) {
-                    Text(self.news.title ?? "")
-                    .font(.headline)
-                    Text(self.news.content ?? "")
-                    .font(.subheadline)
+                    HStack {
+                        Text(self.news.title ?? "")
+                        .multilineTextAlignment(.leading)
+                        .font(.headline)
+                        .lineLimit(nil)
+                        .padding(10)
+                        Spacer()
+                    }
+                    HStack {
+                        Text(self.news.content ?? "")
+                        .multilineTextAlignment(.leading)
+                        .font(.subheadline)
+                        .lineLimit(nil)
+                        .padding(10)
+                        Spacer()
+                    }
                 }
-                Spacer()
             }
+            Spacer()
         }
         .navigationBarTitle(Text("Details"), displayMode: .inline)
     }
