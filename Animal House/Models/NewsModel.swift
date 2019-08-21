@@ -13,15 +13,13 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 
-struct NewsModel : Codable, Identifiable {
+struct NewsModel : Codable {
     
-    var id = UUID()
 	let image : String?
 	let _id : String?
 	let title : String?
 	let content : String?
 	let creationDate : String?
-    let formatedDate: String?
     
 	enum CodingKeys: String, CodingKey {
 		case image = "image"
@@ -38,12 +36,6 @@ struct NewsModel : Codable, Identifiable {
 		title = try values.decodeIfPresent(String.self, forKey: .title)
 		content = try values.decodeIfPresent(String.self, forKey: .content)
 		creationDate = try values.decodeIfPresent(String.self, forKey: .creationDate)
-        
-        let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        let date = dateFormater.date(from: creationDate!)
-        dateFormater.dateFormat = "E dd MMM yyyy"
-        self.formatedDate = dateFormater.string(from: date!)
 	}
 
 }

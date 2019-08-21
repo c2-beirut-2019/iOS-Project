@@ -11,24 +11,24 @@ import URLImage
 
 struct NewDetailsPage: View {
     
-    var news: NewsModel!
+    var news: NewsCellViewViewModel!
     
     var body: some View {
         ScrollView {
             VStack {
-                URLImage(URL(string: news.image!)!, placeholder: Image(systemName: "circle"))
+                URLImage(URL(string: news.image)!, placeholder: Image(systemName: "circle"))
                     .resizable()
                     .aspectRatio(2, contentMode: .fill)
                     .clipped()
                 HStack {
                     Spacer()
-                    Text(self.news.formatedDate!)
+                    Text(self.news.date)
                     .font(.caption)
                     .padding(10)
                 }
                 VStack(alignment: .leading) {
                     HStack {
-                        Text(self.news.title ?? "")
+                        Text(self.news.title)
                         .multilineTextAlignment(.leading)
                         .font(.headline)
                         .lineLimit(nil)
@@ -36,7 +36,7 @@ struct NewDetailsPage: View {
                         Spacer()
                     }
                     HStack {
-                        Text(self.news.content ?? "")
+                        Text(self.news.content)
                         .multilineTextAlignment(.leading)
                         .font(.subheadline)
                         .lineLimit(nil)

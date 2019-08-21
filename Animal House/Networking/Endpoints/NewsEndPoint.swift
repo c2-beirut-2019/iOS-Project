@@ -45,5 +45,5 @@ extension NewsApi: EndPointType {
 }
 
 protocol NewsService {
-    func getNews(paginationURL: String) -> Future<NewsListModel, Error>
+    func getNews(paginationURL: String) -> Future<PaginationListModel<NewsModel>, Error>
 }

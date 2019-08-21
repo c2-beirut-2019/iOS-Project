@@ -11,12 +11,10 @@ import Combine
 
 class NewsListViewViewModel: ObservableObject {
 
-    @Published var news: [NewsModel] = [NewsModel]()
+    @Published var news: [NewsCellViewViewModel] = [NewsCellViewViewModel]()
 
     var didAppear = false
     
-    var didChange = PassthroughSubject<Void, Never>()
-
     var isLoading: Bool = false
 
     /// Bindable Property used for ending the pagination loading view
@@ -28,7 +26,7 @@ class NewsListViewViewModel: ObservableObject {
         return "page=\(pageIndex)&limit=\(limit)"
     }
     
-    var sut: Future<NewsListModel, Error>?
+    var sut: Future<PaginationListModel<NewsModel>, Error>?
     var cancellable: AnyCancellable?
     
     //MARK: - Setup
@@ -45,29 +43,6 @@ class NewsListViewViewModel: ObservableObject {
         if !isPage {
             self.pageIndex = 1
         }
-//        let dataUpdater = AnySubscriber<NewsListModel, Error>(
-//            receiveValue: { [weak self] newsListModel -> Subscribers.Demand in
-//                if isPage {
-//                    self?.news.append(contentsOf: newsListModel.data!)
-//                }
-//                else {
-//                    self?.news = newsListModel.data!
-//                }
-//                if (self?.news.count)! < newsListModel.totalCount! {
-//                    self?.pageIndex += 1
-//                }
-//                else {
-//                    self?.isEndPagination = true
-//                }
-//                return .max(1)
-//            },
-//            receiveCompletion: { [weak self] completion in
-//                if case let .failure(error) = completion {
-//                    print(error)
-//                }
-//                self?.isLoading = false
-//            }
-//        )
 
         self.sut = NetworkManager.sharedInstance.request(endPointType: NewsApi.getNews(paginationURL: next))
         
@@ -80,11 +55,17 @@ class NewsListViewViewModel: ObservableObject {
             self.isLoading = false
 
         }, receiveValue: { newsListModel in
+            var viewModels = [NewsCellViewViewModel]()
+            for each in newsListModel.data! {
+                viewModels.append(NewsCellViewViewModel(newsModel: each))
+            }
+            
             if isPage {
-                self.news.append(contentsOf: newsListModel.data!)
+                self.news.append(contentsOf: viewModels)
             }
             else {
-                self.news = newsListModel.data!
+                self.news.removeAll()
+                self.news = viewModels
             }
             if self.news.count < newsListModel.totalCount! {
                 self.pageIndex += 1

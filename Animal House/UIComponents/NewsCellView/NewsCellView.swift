@@ -11,27 +11,27 @@ import URLImage
 
 struct NewsCellView: View {
         
-    var news: NewsModel!
+    var newsCellModel: NewsCellViewViewModel!
     
     var body: some View {
-        NavigationLink(destination: NewDetailsPage(news: self.news)) {
+        NavigationLink(destination: NewDetailsPage(news: self.newsCellModel)) {
             HStack() {
-                URLImage(URL(string: news.image!)!, placeholder: Image(systemName: "circle"))
+                URLImage(URL(string: newsCellModel.image)!, placeholder: Image(systemName: "circle"))
                     .resizable()
                     .frame(width: 90, height: 90)
                     .padding(.vertical, 8)
                     .padding(.horizontal, 8)
                     .scaledToFill()
                 VStack (alignment: .leading) {
-                    Text(news.title ?? "")
+                    Text(newsCellModel.title)
                     .font(.headline)
-                    Text(news.content ?? "")
+                    Text(newsCellModel.content)
                     .font(.subheadline)
                     
                 }
                 Spacer(minLength: 8)
                 VStack(alignment: .trailing) {
-                    Text(news.formatedDate ?? "")
+                    Text(newsCellModel.date)
                         .font(.caption)
                     .offset(x: 0, y: -40)
                 }

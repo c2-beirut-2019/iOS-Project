@@ -17,7 +17,7 @@ struct NewsListPage: View {
         NavigationView {
             List {
                 ForEach(self.viewModel.news) { news in
-                    NewsCellView(news: news)
+                    NewsCellView(newsCellModel: news)
                 }
                 if !self.viewModel.isEndPagination {
                     LoadingRow(isLoading: true).onAppear {

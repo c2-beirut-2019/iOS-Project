@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct NewsListModel : Codable, Identifiable {
+struct PaginationListModel<T: Codable>: Codable, Identifiable {
     
     var id = UUID()
-    let data : [NewsModel]?
+    let data : [T]?
     let pageCount : Int?
     let totalCount : Int?
     let pageLimit : Int?
@@ -26,7 +26,7 @@ struct NewsListModel : Codable, Identifiable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        data = try values.decodeIfPresent([NewsModel].self, forKey: .data)
+        data = try values.decodeIfPresent([T].self, forKey: .data)
         pageCount = try values.decodeIfPresent(Int.self, forKey: .pageCount)
         totalCount = try values.decodeIfPresent(Int.self, forKey: .totalCount)
         pageLimit = try values.decodeIfPresent(Int.self, forKey: .pageLimit)
