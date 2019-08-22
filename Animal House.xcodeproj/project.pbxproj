@@ -25,7 +25,7 @@
 		A44221B122F39C300052F131 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A442219D22F39C300052F131 /* EndPointType.swift */; };
 		A44221B422F39CFE0052F131 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44221B322F39CFE0052F131 /* Data.swift */; };
 		A460A26723017F5300980386 /* NewDetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460A26623017F5300980386 /* NewDetailsPage.swift */; };
-		A46321422303578D0063B9F9 /* PetAdoptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46321412303578D0063B9F9 /* PetAdoptView.swift */; };
+		A46321422303578D0063B9F9 /* PetAdoptCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46321412303578D0063B9F9 /* PetAdoptCellView.swift */; };
 		A463214423035B020063B9F9 /* LineInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A463214323035B020063B9F9 /* LineInfoView.swift */; };
 		A4632146230365280063B9F9 /* AHTabbedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4632145230365280063B9F9 /* AHTabbedView.swift */; };
 		A467D836230835F50007629A /* NewsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A467D835230835F50007629A /* NewsEndPoint.swift */; };
@@ -40,6 +40,11 @@
 		A48B04F8230DE48500C86B7C /* NewsCellViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B04F7230DE48500C86B7C /* NewsCellViewViewModel.swift */; };
 		A48EB7D22308536200B69ACB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EB7D02308536200B69ACB /* LoadingView.swift */; };
 		A48EB7D32308536200B69ACB /* LoadingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EB7D12308536200B69ACB /* LoadingRow.swift */; };
+		A4B0F512230DEC3000E902A9 /* PetsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */; };
+		A4B0F515230DED0100E902A9 /* PetsToAdoptListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F514230DED0100E902A9 /* PetsToAdoptListPage.swift */; };
+		A4B0F517230DED5C00E902A9 /* PetsToAdoptListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */; };
+		A4B42166230DE99600505397 /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B42165230DE99600505397 /* PetModel.swift */; };
+		A4B4216A230DEADD00505397 /* PetAdoptCellViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B42169230DEADD00505397 /* PetAdoptCellViewViewModel.swift */; };
 		A4E0255D22FE3FE800B3F443 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0255C22FE3FE800B3F443 /* CustomDatePicker.swift */; };
 		A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */; };
 		A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */; };
@@ -81,7 +86,7 @@
 		A442219D22F39C300052F131 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		A44221B322F39CFE0052F131 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A460A26623017F5300980386 /* NewDetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailsPage.swift; sourceTree = "<group>"; };
-		A46321412303578D0063B9F9 /* PetAdoptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAdoptView.swift; sourceTree = "<group>"; };
+		A46321412303578D0063B9F9 /* PetAdoptCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAdoptCellView.swift; sourceTree = "<group>"; };
 		A463214323035B020063B9F9 /* LineInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineInfoView.swift; sourceTree = "<group>"; };
 		A4632145230365280063B9F9 /* AHTabbedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHTabbedView.swift; sourceTree = "<group>"; };
 		A4632147230366BF0063B9F9 /* Animal House.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Animal House.entitlements"; sourceTree = "<group>"; };
@@ -97,6 +102,11 @@
 		A48B04F7230DE48500C86B7C /* NewsCellViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellViewViewModel.swift; sourceTree = "<group>"; };
 		A48EB7D02308536200B69ACB /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A48EB7D12308536200B69ACB /* LoadingRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingRow.swift; sourceTree = "<group>"; };
+		A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsEndPoint.swift; sourceTree = "<group>"; };
+		A4B0F514230DED0100E902A9 /* PetsToAdoptListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsToAdoptListPage.swift; sourceTree = "<group>"; };
+		A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsToAdoptListViewModel.swift; sourceTree = "<group>"; };
+		A4B42165230DE99600505397 /* PetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
+		A4B42169230DEADD00505397 /* PetAdoptCellViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAdoptCellViewViewModel.swift; sourceTree = "<group>"; };
 		A4E0255C22FE3FE800B3F443 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		A4E4CD9C22F23ACE00D1333E /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +147,7 @@
 				A467D83923083D760007629A /* Error.swift */,
 				A467D837230836C20007629A /* PaginationListModel.swift */,
 				A411D67E22FB73E700CCD600 /* NewsModel.swift */,
+				A4B42165230DE99600505397 /* PetModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,9 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				A4632145230365280063B9F9 /* AHTabbedView.swift */,
-				A467D83B23083FA10007629A /* NewsListPage */,
-				A4D23048230C66A500FC0F0B /* NewDetailsPage */,
+				A4B0F513230DECEC00E902A9 /* News */,
 				A47ACF0722FE3A850005D760 /* ProfilePage.swift */,
+				A4B0F518230DEE1000E902A9 /* PetsToAdoptListPage */,
 				A43F272E22FA2BF700F21B70 /* SignUp */,
 			);
 			path = Pages;
@@ -176,7 +187,7 @@
 				A47ACF0322FE34190005D760 /* InputTextField.swift */,
 				A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */,
 				A4E0255C22FE3FE800B3F443 /* CustomDatePicker.swift */,
-				A46321412303578D0063B9F9 /* PetAdoptView.swift */,
+				A4B42168230DEAC800505397 /* PetAdoptCellView */,
 				A463214323035B020063B9F9 /* LineInfoView.swift */,
 			);
 			path = UIComponents;
@@ -197,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				A467D835230835F50007629A /* NewsEndPoint.swift */,
+				A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -271,6 +283,49 @@
 				A48B04F7230DE48500C86B7C /* NewsCellViewViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4B0F513230DECEC00E902A9 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A467D83B23083FA10007629A /* NewsListPage */,
+				A4D23048230C66A500FC0F0B /* NewDetailsPage */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		A4B0F518230DEE1000E902A9 /* PetsToAdoptListPage */ = {
+			isa = PBXGroup;
+			children = (
+				A4B0F519230DEEB600E902A9 /* ViewModel */,
+				A4B0F514230DED0100E902A9 /* PetsToAdoptListPage.swift */,
+			);
+			path = PetsToAdoptListPage;
+			sourceTree = "<group>";
+		};
+		A4B0F519230DEEB600E902A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4B42167230DEAC300505397 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4B42169230DEADD00505397 /* PetAdoptCellViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4B42168230DEAC800505397 /* PetAdoptCellView */ = {
+			isa = PBXGroup;
+			children = (
+				A4B42167230DEAC300505397 /* ViewModel */,
+				A46321412303578D0063B9F9 /* PetAdoptCellView.swift */,
+			);
+			path = PetAdoptCellView;
 			sourceTree = "<group>";
 		};
 		A4D23048230C66A500FC0F0B /* NewDetailsPage */ = {
@@ -447,23 +502,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B0F515230DED0100E902A9 /* PetsToAdoptListPage.swift in Sources */,
 				A44221AB22F39C300052F131 /* JSONParameterEncoder.swift in Sources */,
+				A4B0F517230DED5C00E902A9 /* PetsToAdoptListViewModel.swift in Sources */,
 				A43F272C22FA2B9900F21B70 /* CredentialsPage.swift in Sources */,
+				A4B0F512230DEC3000E902A9 /* PetsEndPoint.swift in Sources */,
 				A47ACF0822FE3A850005D760 /* ProfilePage.swift in Sources */,
 				A44221A922F39C300052F131 /* ParameterEncoding.swift in Sources */,
 				A44221B122F39C300052F131 /* EndPointType.swift in Sources */,
+				A4B4216A230DEADD00505397 /* PetAdoptCellViewViewModel.swift in Sources */,
 				A4FAF46722FCFD4E009358AC /* NewsListPage.swift in Sources */,
 				A47D6C1222FCFB5100C9FFA1 /* DoctorCellView.swift in Sources */,
 				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
 				A44221AC22F39C300052F131 /* NetworkManager.swift in Sources */,
 				A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */,
 				A48B04F8230DE48500C86B7C /* NewsCellViewViewModel.swift in Sources */,
-				A46321422303578D0063B9F9 /* PetAdoptView.swift in Sources */,
+				A46321422303578D0063B9F9 /* PetAdoptCellView.swift in Sources */,
 				A48EB7D32308536200B69ACB /* LoadingRow.swift in Sources */,
 				A467D836230835F50007629A /* NewsEndPoint.swift in Sources */,
 				A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */,
 				A467D83D23083FC30007629A /* NewsListViewViewModel.swift in Sources */,
 				A460A26723017F5300980386 /* NewDetailsPage.swift in Sources */,
+				A4B42166230DE99600505397 /* PetModel.swift in Sources */,
 				A467D838230836C20007629A /* PaginationListModel.swift in Sources */,
 				A48EB7D22308536200B69ACB /* LoadingView.swift in Sources */,
 				A44221AA22F39C300052F131 /* URLParameterEncoding.swift in Sources */,

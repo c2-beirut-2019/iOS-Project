@@ -27,7 +27,7 @@ struct NewsListPage: View {
                     }
                 }
             }
-            .navigationBarTitle(Text("News"))
+            .navigationBarTitle(Text(self.viewModel.title))
         }
         .onAppear {
             guard !self.viewModel.didAppear else {

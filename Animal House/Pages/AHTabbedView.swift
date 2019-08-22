@@ -16,12 +16,12 @@ struct AHTabbedView: View {
                 NewsListPage(viewModel: NewsListViewViewModel())
                 .tabItem {
                     Image(systemName: "1.square.fill")
-                    Text("First")
+                    Text("News")
                 }
-                NewsListPage(viewModel: NewsListViewViewModel())
+                PetsToAdoptListPage(viewModel: PetsToAdoptListViewModel())
                 .tabItem {
                     Image(systemName: "2.square.fill")
-                    Text("Second")
+                    Text("Pets")
                 }
             }
      }

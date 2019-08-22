@@ -1,17 +1,19 @@
 //
-//  NewsListViewViewModel.swift
+//  PetsToAdoptListViewModel.swift
 //  Animal House
 //
-//  Created by Roy Geagea on 8/17/19.
+//  Created by Roy Geagea on 8/22/19.
 //  Copyright © 2019 Roy Geagea. All rights reserved.
 //
 
 import SwiftUI
 import Combine
 
-class NewsListViewViewModel: ObservableObject {
+class PetsToAdoptListViewModel: ObservableObject {
 
-    @Published var news: [NewsCellViewViewModel] = [NewsCellViewViewModel]()
+    var title = "Pets to adopt"
+    
+    @Published var pets: [PetAdoptCellViewViewModel] = [PetAdoptCellViewViewModel]()
 
     var didAppear = false
     
@@ -26,7 +28,7 @@ class NewsListViewViewModel: ObservableObject {
         return "page=\(pageIndex)&limit=\(limit)"
     }
     
-    var sut: Future<PaginationListModel<NewsModel>, Error>?
+    var sut: Future<PaginationListModel<PetModel>, Error>?
     var cancellable: AnyCancellable?
     
     //MARK: - Setup
@@ -37,14 +39,14 @@ class NewsListViewViewModel: ObservableObject {
     
     // MARK: - APIs
     
-    func getNews(isPage: Bool) {
+    func getPetsToAdopt(isPage: Bool) {
         self.isLoading = true
         self.isEndPagination = false
         if !isPage {
             self.pageIndex = 1
         }
 
-        self.sut = NetworkManager.sharedInstance.request(endPointType: NewsApi.getNews(paginationURL: next))
+        self.sut = NetworkManager.sharedInstance.request(endPointType: PetsApi.petsToAdopt(paginationURL: next))
         
         self.cancellable = sut!
             .receive(on: RunLoop.main)
@@ -54,20 +56,20 @@ class NewsListViewViewModel: ObservableObject {
             }
             self.isLoading = false
 
-        }, receiveValue: { newsListModel in
-            var viewModels = [NewsCellViewViewModel]()
-            for each in newsListModel.data! {
-                viewModels.append(NewsCellViewViewModel(newsModel: each))
+        }, receiveValue: { petsListModel in
+            var viewModels = [PetAdoptCellViewViewModel]()
+            for each in petsListModel.data! {
+                viewModels.append(PetAdoptCellViewViewModel(petModel: each))
             }
             
             if isPage {
-                self.news.append(contentsOf: viewModels)
+                self.pets.append(contentsOf: viewModels)
             }
             else {
-                self.news.removeAll()
-                self.news = viewModels
+                self.pets.removeAll()
+                self.pets = viewModels
             }
-            if self.news.count < newsListModel.totalCount! {
+            if self.pets.count < petsListModel.totalCount! {
                 self.pageIndex += 1
             }
             else {
