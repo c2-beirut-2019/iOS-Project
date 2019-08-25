@@ -11,7 +11,7 @@ import SwiftUI
 struct PhoneNumberTextField: View {
     
     @State var countryCode = "+961"
-    @State var mobileNumber = ""
+    @Binding var mobileNumber: String
     
     var body: some View {
         HStack() {
@@ -19,6 +19,7 @@ struct PhoneNumberTextField: View {
             .padding(.vertical, 10)
             .padding(.horizontal, 10)
             .disabled(true)
+            .fixedSize()
             TextField("Mobile Number", text: $mobileNumber)
             .keyboardType(.phonePad)
             .padding(.vertical, 10)
@@ -27,10 +28,10 @@ struct PhoneNumberTextField: View {
     }
 }
 
-#if DEBUG
-struct PhoneNumberTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        PhoneNumberTextField()
-    }
-}
-#endif
+//#if DEBUG
+//struct PhoneNumberTextField_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PhoneNumberTextField()
+//    }
+//}
+//#endif

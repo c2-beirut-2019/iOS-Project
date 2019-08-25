@@ -21,4 +21,20 @@ extension NSMutableData {
             append(data)
         }
     }
+    
+    func convertToBase64() -> String {
+        //Encode to base64
+        let myBase64Data = self.base64EncodedData(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
+
+        //Decode base64
+        let resultData = NSData(base64Encoded: myBase64Data, options: NSData.Base64DecodingOptions.ignoreUnknownCharacters)!
+
+        //Convert NSData to NSString
+        let resultNSString = NSString(data: resultData as Data, encoding: String.Encoding.utf8.rawValue)!
+
+        //Convert NSString to String
+        let resultString = resultNSString as String
+        return resultString
+    }
+    
 }

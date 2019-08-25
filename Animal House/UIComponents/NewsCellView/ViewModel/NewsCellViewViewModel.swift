@@ -33,11 +33,10 @@ extension NewsCellViewViewModel {
     }
     
     var date: String {
+        let date = self.newsModel.creationDate!.animalHouseDate()
         let dateFormater = DateFormatter()
-        dateFormater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        let date = dateFormater.date(from: self.newsModel.creationDate!)
         dateFormater.dateFormat = "E dd MMM yyyy"
-        return dateFormater.string(from: date!)
+        return dateFormater.string(from: date)
     }
     
 }

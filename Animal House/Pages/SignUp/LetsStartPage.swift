@@ -12,7 +12,7 @@ struct LetsStartPage: View {
     var body: some View {
         VStack {
             Spacer()
-            RoundedButton(title: "Let's Start")
+            RoundedButton(title: "Let's Start", isDisabled: false, action: {})
             .offset(y: -20)
             .padding(.bottom, 20)
         }

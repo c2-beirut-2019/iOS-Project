@@ -18,7 +18,7 @@ class PetsToAdoptListViewModel: ObservableObject {
     var didAppear = false
     
     var isLoading: Bool = false
-
+    
     /// Bindable Property used for ending the pagination loading view
     @Published var isEndPagination: Bool = false
     

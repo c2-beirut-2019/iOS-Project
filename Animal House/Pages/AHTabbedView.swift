@@ -23,7 +23,13 @@ struct AHTabbedView: View {
                     Image(systemName: "2.square.fill")
                     Text("Pets")
                 }
+                ProfilePage(viewModel: ProfilePageViewModel())
+                .tabItem {
+                    Image(systemName: "3.square.fill")
+                    Text("My Profile")
+                }
             }
+            .edgesIgnoringSafeArea(.top)
      }
 }
 

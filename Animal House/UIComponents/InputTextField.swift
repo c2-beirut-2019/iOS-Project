@@ -11,7 +11,7 @@ import SwiftUI
 struct InputTextField: View {
     
     var placeholder: String!
-    @State var value: String = ""
+    @Binding var value: String
     
     var body: some View {
         TextField(placeholder, text: $value)
@@ -19,10 +19,10 @@ struct InputTextField: View {
     }
 }
 
-#if DEBUG
-struct InputTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        InputTextField()
-    }
-}
-#endif
+//#if DEBUG
+//struct InputTextField_Previews: PreviewProvider {
+//    static var previews: some View {
+//        InputTextField(value: "")
+//    }
+//}
+//#endif

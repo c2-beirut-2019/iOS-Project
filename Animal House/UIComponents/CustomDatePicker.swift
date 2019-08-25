@@ -15,23 +15,22 @@ struct CustomDatePicker: View {
         return formatter
     }
 
-    @State var birthDate = Date()
+    @Binding var birthDate: Date
 
     var body: some View {
         VStack {
             DatePicker(selection: $birthDate, displayedComponents: .date) {
                 Text("")
             }
-
-            Text("Date is \(birthDate, formatter: dateFormatter)")
         }
     }
 }
 
-#if DEBUG
-struct CustomDatePicker_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomDatePicker()
-    }
-}
-#endif
+//#if DEBUG
+//struct CustomDatePicker_Previews: PreviewProvider {
+//    
+//    static var previews: some View {
+//        CustomDatePicker(birthDate: $date)
+//    }
+//}
+//#endif

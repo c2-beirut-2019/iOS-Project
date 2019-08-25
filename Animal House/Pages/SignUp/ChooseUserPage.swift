@@ -11,9 +11,9 @@ import SwiftUI
 struct ChooseUserPage: View {
     var body: some View {
         VStack(alignment: .center) {
-            RoundedButton(title: "Doctor")
+            RoundedButton(title: "Doctor", isDisabled: false, action: {})
                 .padding(.vertical, 10)
-            RoundedButton(title: "Client")
+            RoundedButton(title: "Client", isDisabled: false, action: {})
         }
     }
 }

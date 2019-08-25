@@ -28,14 +28,8 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         
         do {
             let request = try self.buildRequest(from: route)
-            OperationQueue.main.addOperation({
-                UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            })
             NetworkLogger.log(request: request)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
-                OperationQueue.main.addOperation({
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                })
                 NetworkLogger.log(response: response, data: data, error: error)
                 completion(data, response, error)
             })
