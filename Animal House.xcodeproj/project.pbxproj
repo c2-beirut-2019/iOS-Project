@@ -49,6 +49,7 @@
 		A47ACF0822FE3A850005D760 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0722FE3A850005D760 /* ProfilePage.swift */; };
 		A47D6C1222FCFB5100C9FFA1 /* DoctorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47D6C1122FCFB5100C9FFA1 /* DoctorCellView.swift */; };
 		A48B04F8230DE48500C86B7C /* NewsCellViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B04F7230DE48500C86B7C /* NewsCellViewViewModel.swift */; };
+		A48E719D23144EC9006A9531 /* CredentialsPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E719C23144EC9006A9531 /* CredentialsPageViewModel.swift */; };
 		A48EB7D22308536200B69ACB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EB7D02308536200B69ACB /* LoadingView.swift */; };
 		A48EB7D32308536200B69ACB /* LoadingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EB7D12308536200B69ACB /* LoadingRow.swift */; };
 		A4B0F512230DEC3000E902A9 /* PetsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */; };
@@ -56,6 +57,7 @@
 		A4B0F517230DED5C00E902A9 /* PetsToAdoptListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */; };
 		A4B42166230DE99600505397 /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B42165230DE99600505397 /* PetModel.swift */; };
 		A4B4216A230DEADD00505397 /* PetAdoptCellViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B42169230DEADD00505397 /* PetAdoptCellViewViewModel.swift */; };
+		A4B9C01E231461AA004A5C7C /* JSONURLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B9C01D231461AA004A5C7C /* JSONURLEncoding.swift */; };
 		A4D0B468230F72BB00EE9A35 /* RGImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0B467230F72BB00EE9A35 /* RGImagePicker.swift */; };
 		A4E0255D22FE3FE800B3F443 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0255C22FE3FE800B3F443 /* CustomDatePicker.swift */; };
 		A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */; };
@@ -126,6 +128,7 @@
 		A47ACF0722FE3A850005D760 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		A47D6C1122FCFB5100C9FFA1 /* DoctorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCellView.swift; sourceTree = "<group>"; };
 		A48B04F7230DE48500C86B7C /* NewsCellViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellViewViewModel.swift; sourceTree = "<group>"; };
+		A48E719C23144EC9006A9531 /* CredentialsPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsPageViewModel.swift; sourceTree = "<group>"; };
 		A48EB7D02308536200B69ACB /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A48EB7D12308536200B69ACB /* LoadingRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingRow.swift; sourceTree = "<group>"; };
 		A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsEndPoint.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsToAdoptListViewModel.swift; sourceTree = "<group>"; };
 		A4B42165230DE99600505397 /* PetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
 		A4B42169230DEADD00505397 /* PetAdoptCellViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetAdoptCellViewViewModel.swift; sourceTree = "<group>"; };
+		A4B9C01D231461AA004A5C7C /* JSONURLEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONURLEncoding.swift; sourceTree = "<group>"; };
 		A4D0B467230F72BB00EE9A35 /* RGImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGImagePicker.swift; sourceTree = "<group>"; };
 		A4E0255C22FE3FE800B3F443 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		A4E4CD9C22F23ACE00D1333E /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,7 +224,7 @@
 			children = (
 				A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */,
 				A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */,
-				A43F272922FA2B9900F21B70 /* CredentialsPage.swift */,
+				A48E719B23144EB5006A9531 /* CredentialsPage */,
 				A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */,
 			);
 			path = SignUp;
@@ -274,6 +278,7 @@
 			children = (
 				A442219322F39C300052F131 /* ParameterEncoding.swift */,
 				A442219422F39C300052F131 /* URLParameterEncoding.swift */,
+				A4B9C01D231461AA004A5C7C /* JSONURLEncoding.swift */,
 				A442219522F39C300052F131 /* JSONParameterEncoder.swift */,
 			);
 			path = Encoding;
@@ -357,6 +362,23 @@
 			isa = PBXGroup;
 			children = (
 				A48B04F7230DE48500C86B7C /* NewsCellViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A48E719B23144EB5006A9531 /* CredentialsPage */ = {
+			isa = PBXGroup;
+			children = (
+				A48E719E23144ECE006A9531 /* ViewModel */,
+				A43F272922FA2B9900F21B70 /* CredentialsPage.swift */,
+			);
+			path = CredentialsPage;
+			sourceTree = "<group>";
+		};
+		A48E719E23144ECE006A9531 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A48E719C23144EC9006A9531 /* CredentialsPageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -661,6 +683,7 @@
 				A454D9B323133CAE00C84352 /* RGActivityIndicator.swift in Sources */,
 				A4FAF46722FCFD4E009358AC /* NewsListPage.swift in Sources */,
 				A47D6C1222FCFB5100C9FFA1 /* DoctorCellView.swift in Sources */,
+				A4B9C01E231461AA004A5C7C /* JSONURLEncoding.swift in Sources */,
 				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
 				A44221AC22F39C300052F131 /* NetworkManager.swift in Sources */,
 				A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */,
@@ -681,6 +704,7 @@
 				A44221AA22F39C300052F131 /* URLParameterEncoding.swift in Sources */,
 				A4D0B468230F72BB00EE9A35 /* RGImagePicker.swift in Sources */,
 				A454D9AF2311F31700C84352 /* RGImageEditor.swift in Sources */,
+				A48E719D23144EC9006A9531 /* CredentialsPageViewModel.swift in Sources */,
 				A43F273D22FB655B00F21B70 /* NewsCellView.swift in Sources */,
 				A44221AF22F39C300052F131 /* Router.swift in Sources */,
 				A44221AD22F39C300052F131 /* HTTPTask.swift in Sources */,

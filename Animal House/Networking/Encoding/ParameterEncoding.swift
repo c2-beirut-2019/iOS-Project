@@ -17,6 +17,7 @@ public protocol ParameterEncoder {
 public enum ParameterEncoding {
     
     case urlEncoding
+    case jsonBodyUrlEncoded
     case jsonEncoding
     case urlAndJsonEncoding
     
@@ -32,7 +33,9 @@ public enum ParameterEncoding {
             case .jsonEncoding:
                 guard let bodyParameters = bodyParameters else { return }
                 try JSONParameterEncoder().encode(urlRequest: &urlRequest, with: bodyParameters)
-                
+            case .jsonBodyUrlEncoded:
+                guard let bodyParameters = bodyParameters else { return }
+                try JSONURLEncoding().encode(urlRequest: &urlRequest, with: bodyParameters)
             case .urlAndJsonEncoding:
                 guard let bodyParameters = bodyParameters,
                     let urlParameters = urlParameters else { return }

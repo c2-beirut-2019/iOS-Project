@@ -55,7 +55,6 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
             case .requestParameters(let bodyParameters,
                                     let bodyEncoding,
                                     let urlParameters):
-                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 try self.configureParameters(bodyParameters: bodyParameters,
                                              bodyEncoding: bodyEncoding,
                                              urlParameters: urlParameters,

@@ -10,6 +10,8 @@ import SwiftUI
 
 struct CredentialsPage: View {
     
+    @ObservedObject var viewModel: CredentialsPageViewModel
+
     @State private var userName: String = ""
     @State private var password: String = ""
 
@@ -26,16 +28,17 @@ struct CredentialsPage: View {
                     HStack(alignment: .center) {
                         Spacer()
                         Button(action: {
-                                    print("register account")
+                            if self.viewModel.isValidInput(username: self.userName, password: self.password) {
+                                self.viewModel.login(username: self.userName, password: self.password)
+                            }
                                 }) {
-                                    Text("Confirm")
+                                    Text("Continue")
                                 }
                         Spacer()
                     }
-
                 }
             }
-            .navigationBarTitle(Text("Registration Form"))
+            .navigationBarTitle(Text(self.viewModel.title))
         }
 
     }
@@ -44,7 +47,7 @@ struct CredentialsPage: View {
 #if DEBUG
 struct CredentialsPage_Previews: PreviewProvider {
     static var previews: some View {
-        CredentialsPage()
+        CredentialsPage(viewModel: CredentialsPageViewModel(type: CredentialsPageType.login))
     }
 }
 #endif
