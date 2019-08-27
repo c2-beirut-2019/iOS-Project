@@ -9,23 +9,23 @@
 import Foundation
 import Combine
 
-public enum UserProfileApi {
+public enum DoctorProfileApi {
     case getProfile
     case updateProfile(bodyParameters: [String: Any])
-    case createUser(accessCode: String, username: String, password: String)
+    case createDoctor(accessCode: String, username: String, password: String)
     case login(username: String, password: String)
 }
 
-extension UserProfileApi: EndPointType {
+extension DoctorProfileApi: EndPointType {
     
     var path: String {
         switch self {
             case .getProfile, .updateProfile:
-                return "client/profile"
-            case .createUser:
-                return "client/username"
+                return "doctor/profile"
+            case .createDoctor:
+                return "doctor/username"
             case .login:
-                return "client/authenticate"
+                return "doctor/authenticate"
         }
     }
     
@@ -33,7 +33,7 @@ extension UserProfileApi: EndPointType {
         switch self {
             case .getProfile:
                 return .get
-            case .updateProfile, .createUser, .login:
+            case .updateProfile, .createDoctor, .login:
                 return .post
         }
     }
@@ -48,7 +48,7 @@ extension UserProfileApi: EndPointType {
                 return .requestParametersAndHeaders(bodyParameters: bodyParameters,
                                                     bodyEncoding: .jsonEncoding,
                                                     urlParameters: [:], additionHeaders: headers)
-            case .createUser(let accessCode, let username, let password):
+            case .createDoctor(let accessCode, let username, let password):
                 return .requestParametersAndHeaders(bodyParameters: ["accessCode": accessCode, "username": username, "password": password],
                                                     bodyEncoding: .jsonEncoding,
                                                     urlParameters: [:], additionHeaders: nil)
@@ -65,9 +65,9 @@ extension UserProfileApi: EndPointType {
     
 }
 
-protocol UserProfileService {
-    func getProfile() -> Future<UserProfile, Error>
-    func updateProfile(parameters: [String: Any]) -> Future<UserProfile, Error>
+protocol DoctorProfileService {
+    func getProfile() -> Future<DoctorProfile, Error>
+    func updateProfile(parameters: [String: Any]) -> Future<DoctorProfile, Error>
     func createUser(accessCode: String, username: String, password: String) -> Future<Session, Error>
     func login(username: String, password: String) -> Future<Session, Error>
 }

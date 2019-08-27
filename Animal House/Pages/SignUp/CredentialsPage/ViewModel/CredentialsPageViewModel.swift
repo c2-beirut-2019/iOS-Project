@@ -10,21 +10,28 @@ import SwiftUI
 import Combine
 
 enum CredentialsPageType {
-    case login
-    case signup
+    case userLogin
+    case userSignup
+    case doctorLogin
+    case doctorSignup
 }
 
 class CredentialsPageViewModel: ObservableObject {
 
-    var type = CredentialsPageType.login
+    var type: CredentialsPageType!
     
     var title: String {
-        type == CredentialsPageType.login ? "Login" : "Sign Up"
+        if type == CredentialsPageType.userLogin || type == CredentialsPageType.doctorLogin {
+            return "Login"
+        }
+        else {
+            return "Sign Up"
+        }
     }
 
     var didAppear = false
 
-    let objectWillChange = PassthroughSubject<UserProfile, Never>()
+    let objectWillChange = PassthroughSubject<Session, Never>()
 
     var profileImage: Image? = nil {
         didSet {
@@ -32,15 +39,15 @@ class CredentialsPageViewModel: ObservableObject {
         }
     }
 
-    var userProfile: UserProfile? {
+    var session: Session? {
         didSet {
-            objectWillChange.send(self.userProfile!)
+            objectWillChange.send(self.session!)
         }
     }
     
     var isLoading: Bool = false
 
-    var sut: Future<UserProfile, Error>?
+    var sut: Future<Session, Error>?
     var cancellable: AnyCancellable?
 
     //MARK: - Setup
@@ -53,8 +60,13 @@ class CredentialsPageViewModel: ObservableObject {
 
     func createUser(accessCode: String, username: String, password: String) {
         self.isLoading = true
-
-        self.sut = NetworkManager.sharedInstance.request(endPointType: UserProfileApi.createUser(accessCode: accessCode, username: username, password: password))
+        
+        if self.type == CredentialsPageType.doctorSignup {
+            self.sut = NetworkManager.sharedInstance.request(endPointType: DoctorProfileApi.createDoctor(accessCode: accessCode, username: username, password: password))
+        }
+        else {
+            self.sut = NetworkManager.sharedInstance.request(endPointType: UserProfileApi.createUser(accessCode: accessCode, username: username, password: password))
+        }
 
         self.cancellable = sut!
             .receive(on: RunLoop.main)
@@ -64,15 +76,20 @@ class CredentialsPageViewModel: ObservableObject {
             }
             self.isLoading = false
             self.cancellable?.cancel()
-        }, receiveValue: { userProfile in
-            self.userProfile = userProfile
+        }, receiveValue: { session in
+            self.session = session
         })
     }
     
     func login(username: String, password: String) {
         self.isLoading = true
 
-        self.sut = NetworkManager.sharedInstance.request(endPointType: UserProfileApi.login(username: username, password: password))
+        if self.type == CredentialsPageType.doctorLogin {
+            self.sut = NetworkManager.sharedInstance.request(endPointType: DoctorProfileApi.login(username: username, password: password))
+        }
+        else {
+            self.sut = NetworkManager.sharedInstance.request(endPointType: UserProfileApi.login(username: username, password: password))
+        }
 
         self.cancellable = sut!
             .receive(on: RunLoop.main)
@@ -82,8 +99,8 @@ class CredentialsPageViewModel: ObservableObject {
             }
             self.isLoading = false
             self.cancellable?.cancel()
-        }, receiveValue: { userProfile in
-            self.userProfile = userProfile
+        }, receiveValue: { session in
+            self.session = session
         })
     }
     

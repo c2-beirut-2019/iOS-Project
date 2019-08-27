@@ -47,7 +47,7 @@ struct CredentialsPage: View {
 #if DEBUG
 struct CredentialsPage_Previews: PreviewProvider {
     static var previews: some View {
-        CredentialsPage(viewModel: CredentialsPageViewModel(type: CredentialsPageType.login))
+        CredentialsPage(viewModel: CredentialsPageViewModel(type: CredentialsPageType.userLogin))
     }
 }
 #endif
