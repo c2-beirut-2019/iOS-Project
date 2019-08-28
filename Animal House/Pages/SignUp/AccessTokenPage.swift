@@ -10,29 +10,32 @@ import SwiftUI
 
 struct AccessTokenPage: View {
     
+    @EnvironmentObject var entry: Entry
     @State private var accessToken: String = ""
+    @State var selection: Int? = nil
 
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Access Token")) {
-                    TextField("Enter here", text: $accessToken)
-                }
-                Section {
-                    HStack(alignment: .center) {
-                        Spacer()
+        Form {
+            Section(header: Text("Access Token")) {
+                TextField("Enter here", text: $accessToken)
+            }
+            Section {
+                HStack(alignment: .center) {
+                    Spacer()
+                    NavigationLink(destination: CredentialsPage(viewModel: CredentialsPageViewModel(type: self.entry.credentialsType)), tag: 1, selection: self.$selection) {
                         Button(action: {
-                                    print("register account")
-                                }) {
+                            self.entry.accessToken = self.accessToken
+                            self.selection = 1
+                        }) {
                                     Text("Continue")
                                 }
-                        Spacer()
                     }
-
+                    Spacer()
                 }
+
             }
-            .navigationBarTitle(Text("Registration Form"))
         }
+        .navigationBarTitle(Text("Registration Form"), displayMode: .large)
     }
 }
 

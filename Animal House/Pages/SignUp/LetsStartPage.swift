@@ -9,12 +9,21 @@
 import SwiftUI
 
 struct LetsStartPage: View {
+    
+    @State var selection: Int? = nil
+    
     var body: some View {
-        VStack {
-            Spacer()
-            RoundedButton(title: "Let's Start", isDisabled: false, action: {})
-            .offset(y: -20)
-            .padding(.bottom, 20)
+        NavigationView {
+            VStack {
+                Spacer()
+                NavigationLink(destination: ChooseUserPage(), tag: 1, selection: self.$selection) {
+                    RoundedButton(title: "Let's Start", isDisabled: false, action: {
+                        self.selection = 1
+                    })
+                }
+                .offset(y: -20)
+                .padding(.bottom, 20)
+            }
         }
     }
 }

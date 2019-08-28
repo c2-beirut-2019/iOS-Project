@@ -14,6 +14,8 @@
 		A41D177A2310BD3000512FB5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41D17792310BD3000512FB5 /* String.swift */; };
 		A41D177C2310C19F00512FB5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41D177B2310C19F00512FB5 /* Date.swift */; };
 		A434CDF92311ECB600C43658 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A434CDF82311ECB600C43658 /* ProfileImageView.swift */; };
+		A43B96752316DFFD0064F6DC /* SignInUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B96742316DFFD0064F6DC /* SignInUp.swift */; };
+		A43B96772316E0F10064F6DC /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B96762316E0F10064F6DC /* Entry.swift */; };
 		A43F272B22FA2B9900F21B70 /* AccessTokenPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */; };
 		A43F272C22FA2B9900F21B70 /* CredentialsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F272922FA2B9900F21B70 /* CredentialsPage.swift */; };
 		A43F273222FA2C5600F21B70 /* ChooseUserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */; };
@@ -95,6 +97,8 @@
 		A41D17792310BD3000512FB5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A41D177B2310C19F00512FB5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		A434CDF82311ECB600C43658 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		A43B96742316DFFD0064F6DC /* SignInUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUp.swift; sourceTree = "<group>"; };
+		A43B96762316E0F10064F6DC /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = "Animal House/Pages/SignUp/Entry.swift"; sourceTree = SOURCE_ROOT; };
 		A43F272922FA2B9900F21B70 /* CredentialsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsPage.swift; sourceTree = "<group>"; };
 		A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenPage.swift; sourceTree = "<group>"; };
 		A43F273022FA2C0400F21B70 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				A467D837230836C20007629A /* PaginationListModel.swift */,
 				A411D67E22FB73E700CCD600 /* NewsModel.swift */,
 				A4B42165230DE99600505397 /* PetModel.swift */,
+				A43B96762316E0F10064F6DC /* Entry.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,8 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */,
-				A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */,
 				A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */,
+				A43B96742316DFFD0064F6DC /* SignInUp.swift */,
+				A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */,
 				A48E719B23144EB5006A9531 /* CredentialsPage */,
 			);
 			path = SignUp;
@@ -702,6 +708,7 @@
 				A46C661C230F51AC0071D5B6 /* UserEndPoint.swift in Sources */,
 				A46C6619230F50740071D5B6 /* ProfilePageViewModel.swift in Sources */,
 				A46321422303578D0063B9F9 /* PetAdoptCellView.swift in Sources */,
+				A43B96752316DFFD0064F6DC /* SignInUp.swift in Sources */,
 				A48EB7D32308536200B69ACB /* LoadingRow.swift in Sources */,
 				A41D177C2310C19F00512FB5 /* Date.swift in Sources */,
 				A467D836230835F50007629A /* NewsEndPoint.swift in Sources */,
@@ -733,6 +740,7 @@
 				A411D68022FB73E700CCD600 /* NewsModel.swift in Sources */,
 				A44221B422F39CFE0052F131 /* Data.swift in Sources */,
 				A467D83A23083D760007629A /* Error.swift in Sources */,
+				A43B96772316E0F10064F6DC /* Entry.swift in Sources */,
 				A4E0255D22FE3FE800B3F443 /* CustomDatePicker.swift in Sources */,
 				A41D177A2310BD3000512FB5 /* String.swift in Sources */,
 			);

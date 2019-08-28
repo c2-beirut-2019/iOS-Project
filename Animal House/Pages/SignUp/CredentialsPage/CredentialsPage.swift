@@ -10,37 +10,40 @@ import SwiftUI
 
 struct CredentialsPage: View {
     
+    @EnvironmentObject var entry: Entry
     @ObservedObject var viewModel: CredentialsPageViewModel
 
     @State private var userName: String = ""
     @State private var password: String = ""
 
     var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Username")) {
-                    TextField("Enter here", text: $userName)
-                }
-                Section(header: Text("Password")) {
-                    TextField("Enter here", text: $password)
-                }
-                Section {
-                    HStack(alignment: .center) {
-                        Spacer()
-                        Button(action: {
-                            if self.viewModel.isValidInput(username: self.userName, password: self.password) {
+        Form {
+            Section(header: Text("Username")) {
+                TextField("Enter here", text: $userName)
+            }
+            Section(header: Text("Password")) {
+                TextField("Enter here", text: $password)
+            }
+            Section {
+                HStack(alignment: .center) {
+                    Spacer()
+                    Button(action: {
+                        if self.viewModel.isValidInput(username: self.userName, password: self.password) {
+                            if self.entry.credentialsType == .userLogin || self.entry.credentialsType == .doctorLogin {
                                 self.viewModel.login(username: self.userName, password: self.password)
                             }
-                                }) {
-                                    Text("Continue")
-                                }
-                        Spacer()
-                    }
+                            else {
+                                self.viewModel.createUser(accessCode: self.entry.accessToken, username: self.userName, password: self.password)
+                            }
+                        }
+                            }) {
+                                Text("Continue")
+                            }
+                    Spacer()
                 }
             }
-            .navigationBarTitle(Text(self.viewModel.title))
         }
-
+        .navigationBarTitle(Text(self.viewModel.title), displayMode: .large)
     }
 }
 

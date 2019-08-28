@@ -7,14 +7,30 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ChooseUserPage: View {
+    
+    @EnvironmentObject var entry: Entry
+    @State var selection: Int? = nil
+
     var body: some View {
         VStack(alignment: .center) {
-            RoundedButton(title: "Doctor", isDisabled: false, action: {})
+            NavigationLink(destination: SignInUp(), tag: 1, selection: self.$selection) {
+                RoundedButton(title: "Doctor", isDisabled: false, action: {
+                    self.entry.isDoctor = true
+                    self.selection = 1
+                })
                 .padding(.vertical, 10)
-            RoundedButton(title: "Client", isDisabled: false, action: {})
+            }
+            NavigationLink(destination: SignInUp(), tag: 2, selection: self.$selection) {
+                RoundedButton(title: "Client", isDisabled: false, action: {
+                    self.entry.isDoctor = false
+                    self.selection = 2
+                })
+            }
         }
+        .navigationBarTitle(Text(""), displayMode: .inline)
     }
 }
 
