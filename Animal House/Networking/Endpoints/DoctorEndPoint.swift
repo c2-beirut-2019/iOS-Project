@@ -60,7 +60,7 @@ extension DoctorProfileApi: EndPointType {
     }
     
     var headers: HTTPHeaders? {
-        return ["Authorization": "Bearer 9ac71e3a91ae05a66112baaea9ae7c2a1e2ebb69"]
+        return ["Authorization": UserDefaultsManager.shared.getAuthToken()]
     }
     
 }

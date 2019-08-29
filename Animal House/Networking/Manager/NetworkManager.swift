@@ -72,8 +72,17 @@ class NetworkManager: NSObject {
                             return resolver(.failure(NSError(domain: "", code: noDataErrorCode, userInfo: [NSLocalizedDescriptionKey: NetworkResponse.noData.rawValue])))
                         }
                         do {
-                            let apiResponse = try JSONDecoder().decode(T.self, from: responseData)
-                            return resolver(.success(apiResponse))
+                            var emptyString = String(data: responseData, encoding: .utf8)
+                            if emptyString == "" {
+                                emptyString = "{\"success\": true}"
+                                let emptyResponseData = Data(emptyString!.utf8)
+                                let apiResponse = try JSONDecoder().decode(T.self, from: emptyResponseData)
+                                return resolver(.success(apiResponse))
+                            }
+                            else {
+                                let apiResponse = try JSONDecoder().decode(T.self, from: responseData)
+                                return resolver(.success(apiResponse))
+                            }
                         } catch {
                             print(error)
                             return resolver(.failure(NSError(domain: "", code: unabletoDecodeErrorCode, userInfo: [NSLocalizedDescriptionKey: NetworkResponse.unableToDecode.rawValue])))

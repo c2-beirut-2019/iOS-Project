@@ -13,7 +13,7 @@ struct AccessTokenPage: View {
     @EnvironmentObject var entry: Entry
     @State private var accessToken: String = ""
     @State var selection: Int? = nil
-
+    
     var body: some View {
         Form {
             Section(header: Text("Access Token")) {

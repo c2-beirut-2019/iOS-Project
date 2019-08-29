@@ -34,12 +34,12 @@ extension PetsApi: EndPointType {
             case .petsToAdopt:
                 return .requestParametersAndHeaders(bodyParameters: nil,
                                           bodyEncoding: .urlEncoding,
-                                          urlParameters: [:], additionHeaders: headers)
+                                          urlParameters: [:], additionHeaders: nil)
         }
     }
     
     var headers: HTTPHeaders? {
-        return ["Authorization": "Token "]
+        return nil
     }
     
 }

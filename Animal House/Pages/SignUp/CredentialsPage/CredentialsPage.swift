@@ -15,7 +15,8 @@ struct CredentialsPage: View {
 
     @State private var userName: String = ""
     @State private var password: String = ""
-
+    @State private var isPass: Int? = nil
+    
     var body: some View {
         Form {
             Section(header: Text("Username")) {
@@ -42,6 +43,12 @@ struct CredentialsPage: View {
                     Spacer()
                 }
             }
+        }
+        .onReceive(self.viewModel.objectWillChange) { (session) in
+            UserDefaultsManager.shared.setUserLoggedIn(isLogged: true)
+            UserDefaultsManager.shared.setAuthToken(token: session.access_token!)
+            let tabView = AHTabbedView().environmentObject(self.entry)
+            UIApplication.shared.windows[0].setRootView(rootView: tabView)
         }
         .navigationBarTitle(Text(self.viewModel.title), displayMode: .large)
     }

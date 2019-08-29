@@ -34,12 +34,12 @@ extension NewsApi: EndPointType {
             case .getNews:
                 return .requestParametersAndHeaders(bodyParameters: nil,
                                           bodyEncoding: .urlEncoding,
-                                          urlParameters: [:], additionHeaders: headers)
+                                          urlParameters: [:], additionHeaders: nil)
         }
     }
     
     var headers: HTTPHeaders? {
-        return ["Authorization": "Token "]
+        return nil
     }
     
 }

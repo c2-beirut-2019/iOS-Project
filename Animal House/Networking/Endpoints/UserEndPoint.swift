@@ -60,7 +60,7 @@ extension UserProfileApi: EndPointType {
     }
     
     var headers: HTTPHeaders? {
-        return ["Authorization": "Bearer 9ac71e3a91ae05a66112baaea9ae7c2a1e2ebb69"]
+        return ["Authorization": UserDefaultsManager.shared.getAuthToken()]
     }
     
 }
@@ -68,6 +68,6 @@ extension UserProfileApi: EndPointType {
 protocol UserProfileService {
     func getProfile() -> Future<UserProfile, Error>
     func updateProfile(parameters: [String: Any]) -> Future<UserProfile, Error>
-    func createUser(accessCode: String, username: String, password: String) -> Future<Session, Error>
+    func createUser(accessCode: String, username: String, password: String) -> Future<EmptyResponse, Error>
     func login(username: String, password: String) -> Future<Session, Error>
 }
