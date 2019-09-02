@@ -23,6 +23,11 @@ struct AHTabbedView: View {
                     Image(systemName: "2.square.fill")
                     Text("Pets")
                 }
+                DoctorsListPage(viewModel: DoctorsListViewViewModel())
+                .tabItem {
+                    Image(systemName: "2.square.fill")
+                    Text("Doctors")
+                }
                 ProfilePage(viewModel: ProfilePageViewModel())
                 .tabItem {
                     Image(systemName: "3.square.fill")

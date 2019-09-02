@@ -54,6 +54,9 @@
 		A48E719D23144EC9006A9531 /* CredentialsPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E719C23144EC9006A9531 /* CredentialsPageViewModel.swift */; };
 		A48EB7D22308536200B69ACB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EB7D02308536200B69ACB /* LoadingView.swift */; };
 		A48EB7D32308536200B69ACB /* LoadingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EB7D12308536200B69ACB /* LoadingRow.swift */; };
+		A4A8D6F4231DC2EA0045193E /* DoctorsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A8D6F3231DC2EA0045193E /* DoctorsEndPoint.swift */; };
+		A4A8D6F6231DC3C80045193E /* DoctorsListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A8D6F5231DC3C80045193E /* DoctorsListPage.swift */; };
+		A4A8D6F9231DC4200045193E /* DoctorsListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A8D6F8231DC4200045193E /* DoctorsListViewViewModel.swift */; };
 		A4B0F512230DEC3000E902A9 /* PetsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */; };
 		A4B0F515230DED0100E902A9 /* PetsToAdoptListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F514230DED0100E902A9 /* PetsToAdoptListPage.swift */; };
 		A4B0F517230DED5C00E902A9 /* PetsToAdoptListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */; };
@@ -75,6 +78,8 @@
 		A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */; };
 		A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */; };
 		A4E4CDB722F23AD100D1333E /* Animal_HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDB622F23AD100D1333E /* Animal_HouseTests.swift */; };
+		A4E62919231DC0E600E3A953 /* DoctorCellViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E62918231DC0E600E3A953 /* DoctorCellViewViewModel.swift */; };
+		A4E6291B231DC15800E3A953 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E6291A231DC15800E3A953 /* Doctor.swift */; };
 		A4F44F4B23046E1A00F345BB /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = A4F44F4A23046E1A00F345BB /* URLImage */; };
 		A4FAF46722FCFD4E009358AC /* NewsListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FAF46622FCFD4E009358AC /* NewsListPage.swift */; };
 /* End PBXBuildFile section */
@@ -141,6 +146,9 @@
 		A48E719C23144EC9006A9531 /* CredentialsPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsPageViewModel.swift; sourceTree = "<group>"; };
 		A48EB7D02308536200B69ACB /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		A48EB7D12308536200B69ACB /* LoadingRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingRow.swift; sourceTree = "<group>"; };
+		A4A8D6F3231DC2EA0045193E /* DoctorsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsEndPoint.swift; sourceTree = "<group>"; };
+		A4A8D6F5231DC3C80045193E /* DoctorsListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListPage.swift; sourceTree = "<group>"; };
+		A4A8D6F8231DC4200045193E /* DoctorsListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListViewViewModel.swift; sourceTree = "<group>"; };
 		A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsEndPoint.swift; sourceTree = "<group>"; };
 		A4B0F514230DED0100E902A9 /* PetsToAdoptListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsToAdoptListPage.swift; sourceTree = "<group>"; };
 		A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsToAdoptListViewModel.swift; sourceTree = "<group>"; };
@@ -166,6 +174,8 @@
 		A4E4CDB222F23AD100D1333E /* Animal HouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Animal HouseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4CDB622F23AD100D1333E /* Animal_HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal_HouseTests.swift; sourceTree = "<group>"; };
 		A4E4CDB822F23AD100D1333E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E62918231DC0E600E3A953 /* DoctorCellViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCellViewViewModel.swift; sourceTree = "<group>"; };
+		A4E6291A231DC15800E3A953 /* Doctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
 		A4FAF46622FCFD4E009358AC /* NewsListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPage.swift; sourceTree = "<group>"; };
 		F14737D357DD064B41BA5EB2 /* Pods-Animal House.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal House.debug.xcconfig"; path = "Target Support Files/Pods-Animal House/Pods-Animal House.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +224,7 @@
 		A411D68222FB73EA00CCD600 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A4E6291A231DC15800E3A953 /* Doctor.swift */,
 				A4B9C0232315DB19004A5C7C /* Session.swift */,
 				A4B9C0212315D8BA004A5C7C /* DoctorProfile.swift */,
 				A46C6615230F50060071D5B6 /* UserProfile.swift */,
@@ -234,6 +245,7 @@
 				A4632145230365280063B9F9 /* AHTabbedView.swift */,
 				A4B0F513230DECEC00E902A9 /* News */,
 				A4B0F518230DEE1000E902A9 /* PetsToAdoptListPage */,
+				A4A8D6F7231DC3CE0045193E /* DoctorsListPage */,
 				A46C6617230F50180071D5B6 /* ProfilePage */,
 			);
 			path = Pages;
@@ -261,7 +273,7 @@
 				A48EB7D02308536200B69ACB /* LoadingView.swift */,
 				A43F273022FA2C0400F21B70 /* RoundedButton.swift */,
 				A48B04F6230DE47200C86B7C /* NewsCellView */,
-				A47D6C1122FCFB5100C9FFA1 /* DoctorCellView.swift */,
+				A4E62917231DC0D200E3A953 /* DoctorCellView */,
 				A47ACF0122FE332A0005D760 /* ProfileURLImageView.swift */,
 				A434CDF82311ECB600C43658 /* ProfileImageView.swift */,
 				A47ACF0322FE34190005D760 /* InputTextField.swift */,
@@ -289,6 +301,7 @@
 			children = (
 				A467D835230835F50007629A /* NewsEndPoint.swift */,
 				A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */,
+				A4A8D6F3231DC2EA0045193E /* DoctorsEndPoint.swift */,
 				A46C661B230F51AC0071D5B6 /* UserEndPoint.swift */,
 				A4B9C01F2315D823004A5C7C /* DoctorEndPoint.swift */,
 			);
@@ -406,6 +419,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		A4A8D6F7231DC3CE0045193E /* DoctorsListPage */ = {
+			isa = PBXGroup;
+			children = (
+				A4A8D6FA231DC4F30045193E /* ViewModel */,
+				A4A8D6F5231DC3C80045193E /* DoctorsListPage.swift */,
+			);
+			path = DoctorsListPage;
+			sourceTree = "<group>";
+		};
+		A4A8D6FA231DC4F30045193E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4A8D6F8231DC4200045193E /* DoctorsListViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		A4B0F513230DECEC00E902A9 /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +543,23 @@
 				A4E4CDB822F23AD100D1333E /* Info.plist */,
 			);
 			path = "Animal HouseTests";
+			sourceTree = "<group>";
+		};
+		A4E62917231DC0D200E3A953 /* DoctorCellView */ = {
+			isa = PBXGroup;
+			children = (
+				A4E6291C231DC16F00E3A953 /* ViewModel */,
+				A47D6C1122FCFB5100C9FFA1 /* DoctorCellView.swift */,
+			);
+			path = DoctorCellView;
+			sourceTree = "<group>";
+		};
+		A4E6291C231DC16F00E3A953 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4E62918231DC0E600E3A953 /* DoctorCellViewViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -711,6 +758,7 @@
 				A47D6C1222FCFB5100C9FFA1 /* DoctorCellView.swift in Sources */,
 				A4B9C01E231461AA004A5C7C /* JSONURLEncoding.swift in Sources */,
 				A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */,
+				A4E6291B231DC15800E3A953 /* Doctor.swift in Sources */,
 				A44221AC22F39C300052F131 /* NetworkManager.swift in Sources */,
 				A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */,
 				A48B04F8230DE48500C86B7C /* NewsCellViewViewModel.swift in Sources */,
@@ -732,8 +780,11 @@
 				A48EB7D22308536200B69ACB /* LoadingView.swift in Sources */,
 				A44221AA22F39C300052F131 /* URLParameterEncoding.swift in Sources */,
 				A4D0B468230F72BB00EE9A35 /* RGImagePicker.swift in Sources */,
+				A4E62919231DC0E600E3A953 /* DoctorCellViewViewModel.swift in Sources */,
 				A454D9AF2311F31700C84352 /* RGImageEditor.swift in Sources */,
 				A48E719D23144EC9006A9531 /* CredentialsPageViewModel.swift in Sources */,
+				A4A8D6F9231DC4200045193E /* DoctorsListViewViewModel.swift in Sources */,
+				A4A8D6F6231DC3C80045193E /* DoctorsListPage.swift in Sources */,
 				A4C2C58D23184DF400D2AC44 /* UserDefaultsManager.swift in Sources */,
 				A43F273D22FB655B00F21B70 /* NewsCellView.swift in Sources */,
 				A44221AF22F39C300052F131 /* Router.swift in Sources */,
@@ -741,6 +792,7 @@
 				A44221AD22F39C300052F131 /* HTTPTask.swift in Sources */,
 				A44221B022F39C300052F131 /* NetworkLogger.swift in Sources */,
 				A44221AE22F39C300052F131 /* HTTPMethod.swift in Sources */,
+				A4A8D6F4231DC2EA0045193E /* DoctorsEndPoint.swift in Sources */,
 				A47ACF0422FE34190005D760 /* InputTextField.swift in Sources */,
 				A47ACF0222FE332A0005D760 /* ProfileURLImageView.swift in Sources */,
 				A463214423035B020063B9F9 /* LineInfoView.swift in Sources */,

@@ -9,20 +9,23 @@
 import SwiftUI
 
 struct DoctorCellView: View {
+    
+    var doctorCellModel: DoctorCellViewViewModel!
+
     var body: some View {
         HStack() {
             VStack (alignment: .leading) {
-                Text("FirsName LastName")
+                Text(doctorCellModel.fullName)
                 .font(.headline)
                     .padding(.vertical, 4)
-                Text("speciality")
+                Text(doctorCellModel.speciality)
                 .font(.subheadline)
                 .padding(.vertical, 4)
             }
             .padding()
             Spacer(minLength: 8)
             VStack(alignment: .trailing) {
-                Text("diplomas")
+                Text(doctorCellModel.diplomas)
                 .offset(x: 0, y: -25)
             }
             .padding(.horizontal, 8)
