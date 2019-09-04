@@ -45,9 +45,13 @@ struct CredentialsPage: View {
             }
         }
         .onReceive(self.viewModel.objectWillChange) { (session) in
+            UserDefaultsManager.shared.setUserADoctor(isDoctor: self.entry.isDoctor)
             UserDefaultsManager.shared.setUserLoggedIn(isLogged: true)
             UserDefaultsManager.shared.setAuthToken(token: session.access_token!)
-            let tabView = AHTabbedView().environmentObject(self.entry)
+            UserDefaultsManager.shared.setExpiry(seconds: 0)
+            UserDefaultsManager.shared.setRefreshToken(token: session.refresh_token!)
+            UserDefaultsManager.shared.setRefreshTokenHeader(token: session.refresh_token_header!)
+            let tabView = AHTabbedView()
             UIApplication.shared.windows[0].setRootView(rootView: tabView)
         }
         .navigationBarTitle(Text(self.viewModel.title), displayMode: .large)

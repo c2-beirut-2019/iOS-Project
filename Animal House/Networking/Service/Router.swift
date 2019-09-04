@@ -19,32 +19,78 @@ protocol NetworkRouter: class {
 
 class Router<EndPoint: EndPointType>: NetworkRouter {
     private var task: URLSessionTask?
-    
+    private var refreshTask: URLSessionTask?
+
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = 60.0
         sessionConfig.timeoutIntervalForResource = 60.0
         let session = URLSession.shared
-        
+
         do {
-            let request = try self.buildRequest(from: route)
-            NetworkLogger.log(request: request)
-            task = session.dataTask(with: request, completionHandler: { data, response, error in
-                NetworkLogger.log(response: response, data: data, error: error)
-                completion(data, response, error)
-            })
+            if route.headers != nil && self.didSessionExpire() {
+                var refreshEndpointType = SessionApi.userRefreshToken(refreshToken: UserDefaultsManager.shared.getRefreshToken())
+                if UserDefaultsManager.shared.isUserADoctor() {
+                    refreshEndpointType = SessionApi.doctorRefreshToken(refreshToken: UserDefaultsManager.shared.getRefreshToken())
+                }
+                let refreshRequest = try self.buildRequest(from: refreshEndpointType)
+                refreshTask = session.dataTask(with: refreshRequest, completionHandler: { (data, response, error) in
+                    if error != nil {
+                        completion(data, response, error)
+                    }
+                    else {
+                        if let responseData = data {
+                            do {
+                                let apiResponse = try JSONDecoder().decode(Session.self, from: responseData)
+                                UserDefaultsManager.shared.setAuthToken(token: apiResponse.access_token!)
+                                UserDefaultsManager.shared.setRefreshToken(token: apiResponse.refresh_token!)
+                                UserDefaultsManager.shared.setExpiry(seconds: apiResponse.expires_in!)
+                            }
+                            catch {
+                            
+                            }
+                        }
+                        var request: URLRequest?
+                        do {
+                            request = try self.buildRequest(from: route)
+                            NetworkLogger.log(request: request!)
+                        }
+                        catch {
+                            
+                        }                        
+                        request?.setValue(UserDefaultsManager.shared.getAuthToken(), forHTTPHeaderField: "Authorization")
+                        self.task = session.dataTask(with: request!, completionHandler: { data, response, error in
+                            NetworkLogger.log(response: response, data: data, error: error)
+                            completion(data, response, error)
+                        })
+                        self.task?.resume()
+                    }
+                })
+            }
+            else {
+                let request = try self.buildRequest(from: route)
+                task = session.dataTask(with: request, completionHandler: { data, response, error in
+                    NetworkLogger.log(response: response, data: data, error: error)
+                    completion(data, response, error)
+                })
+            }
         } catch {
             NetworkLogger.log(response: nil, data: nil, error: error)
             completion(nil, nil, error)
         }
-        self.task?.resume()
+        if route.headers != nil && self.didSessionExpire() {
+            self.refreshTask?.resume()
+        }
+        else {
+            self.task?.resume()
+        }
     }
     
     func cancel() {
         self.task?.cancel()
     }
     
-    fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
+    fileprivate func buildRequest(from route: EndPointType) throws -> URLRequest {
         var request = URLRequest(url: URL(string: NetworkManager.baseUrl.rawValue + route.path)!,
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
                                  timeoutInterval: 10.0)
@@ -140,5 +186,15 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
 //        }
 //        return "application/octet-stream"
 //    }
+    
+    func didSessionExpire() -> Bool {
+        let expiryDate = UserDefaultsManager.shared.getExpiryDate()
+        if expiryDate == nil {
+            return false
+        }
+        else {
+            return expiryDate! < Date()
+        }
+    }
     
 }

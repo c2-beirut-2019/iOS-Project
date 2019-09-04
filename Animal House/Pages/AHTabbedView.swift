@@ -25,12 +25,12 @@ struct AHTabbedView: View {
                 }
                 DoctorsListPage(viewModel: DoctorsListViewViewModel())
                 .tabItem {
-                    Image(systemName: "2.square.fill")
+                    Image(systemName: "3.square.fill")
                     Text("Doctors")
                 }
                 ProfilePage(viewModel: ProfilePageViewModel())
                 .tabItem {
-                    Image(systemName: "3.square.fill")
+                    Image(systemName: "4.square.fill")
                     Text("My Profile")
                 }
             }

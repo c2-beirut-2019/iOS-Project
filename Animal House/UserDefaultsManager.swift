@@ -10,11 +10,13 @@ import Foundation
 
 class UserDefaultsManager: NSObject {
     
-    private let isLoggedIn = "userIsLoggedIn"
-    private let authToken = "userTokenAuth"
-    private let refreshToken = "userTokenAuth"
-    private let refreshTokenHeader = "userRefreshTokenHeader"
-    private let isFirstAppLaunch = "OSFirstTimeLaunch"
+    private let isLoggedIn = "isLoggedIn"
+    private let isAppUserADoctor = "isAppUserADoctor"
+    private let authToken = "authToken"
+    private let refreshToken = "refreshToken"
+    private let refreshTokenHeader = "refreshTokenHeader"
+    private let isFirstAppLaunch = "isFirstAppLaunch"
+    private let expiryDate = "expiryDate"
     
     private let userDefaults = UserDefaults.standard
     
@@ -34,6 +36,15 @@ class UserDefaultsManager: NSObject {
         return userDefaults.object(forKey: isLoggedIn) as? Bool ?? false
     }
     
+    func setUserADoctor(isDoctor: Bool) {
+        userDefaults.set(isDoctor, forKey: isAppUserADoctor)
+        userDefaults.synchronize()
+    }
+    
+    func isUserADoctor() -> Bool {
+        return userDefaults.object(forKey: isAppUserADoctor) as? Bool ?? false
+    }
+    
     func setAuthToken(token: String) {
         userDefaults.set(token, forKey: authToken)
         userDefaults.synchronize()
@@ -44,7 +55,7 @@ class UserDefaultsManager: NSObject {
     }
     
     func setRefreshToken(token: String) {
-        userDefaults.set("Bearer" + " " + token, forKey: refreshToken)
+        userDefaults.set(token, forKey: refreshToken)
         userDefaults.synchronize()
     }
     
@@ -70,5 +81,21 @@ class UserDefaultsManager: NSObject {
         else {
             return false
         }
+    }
+    
+    func setFirstTime() {
+        userDefaults.set("1", forKey: isFirstAppLaunch)
+        userDefaults.synchronize()
+    }
+    
+    func setExpiry(seconds: Int) {
+        var currentDate = Date()
+        currentDate.addTimeInterval(TimeInterval(seconds-600))
+        userDefaults.set(currentDate, forKey: expiryDate)
+        userDefaults.synchronize()
+    }
+    
+    func getExpiryDate() -> Date? {
+        return userDefaults.value(forKey: expiryDate) as? Date
     }
 }

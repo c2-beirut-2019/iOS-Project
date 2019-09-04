@@ -20,9 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
-            let entry = Entry()
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: LetsStartPage().environmentObject(entry))
+            if UserDefaultsManager.shared.isUserLoggedIn() {
+                window.rootViewController = UIHostingController(rootView: AHTabbedView())
+            }
+            else {
+                let entry = Entry()
+                window.rootViewController = UIHostingController(rootView: LetsStartPage().environmentObject(entry))
+            }
             self.window = window
             window.makeKeyAndVisible()
         }

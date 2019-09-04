@@ -45,6 +45,7 @@
 		A46C6616230F50060071D5B6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C6615230F50060071D5B6 /* UserProfile.swift */; };
 		A46C6619230F50740071D5B6 /* ProfilePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C6618230F50740071D5B6 /* ProfilePageViewModel.swift */; };
 		A46C661C230F51AC0071D5B6 /* UserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46C661B230F51AC0071D5B6 /* UserEndPoint.swift */; };
+		A4718B42231F0DAC0076911C /* SessionEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4718B41231F0DAC0076911C /* SessionEndPoint.swift */; };
 		A47ACF0222FE332A0005D760 /* ProfileURLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0122FE332A0005D760 /* ProfileURLImageView.swift */; };
 		A47ACF0422FE34190005D760 /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0322FE34190005D760 /* InputTextField.swift */; };
 		A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */; };
@@ -137,6 +138,7 @@
 		A46C6615230F50060071D5B6 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		A46C6618230F50740071D5B6 /* ProfilePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewModel.swift; sourceTree = "<group>"; };
 		A46C661B230F51AC0071D5B6 /* UserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndPoint.swift; sourceTree = "<group>"; };
+		A4718B41231F0DAC0076911C /* SessionEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEndPoint.swift; sourceTree = "<group>"; };
 		A47ACF0122FE332A0005D760 /* ProfileURLImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileURLImageView.swift; sourceTree = "<group>"; };
 		A47ACF0322FE34190005D760 /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		A47ACF0522FE36470005D760 /* PhoneNumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberTextField.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				A4A8D6F3231DC2EA0045193E /* DoctorsEndPoint.swift */,
 				A46C661B230F51AC0071D5B6 /* UserEndPoint.swift */,
 				A4B9C01F2315D823004A5C7C /* DoctorEndPoint.swift */,
+				A4718B41231F0DAC0076911C /* SessionEndPoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				A454D9B12312098000C84352 /* UIImage.swift in Sources */,
 				A47ACF0822FE3A850005D760 /* ProfilePage.swift in Sources */,
 				A44221A922F39C300052F131 /* ParameterEncoding.swift in Sources */,
+				A4718B42231F0DAC0076911C /* SessionEndPoint.swift in Sources */,
 				A44221B122F39C300052F131 /* EndPointType.swift in Sources */,
 				A4B9C0222315D8BA004A5C7C /* DoctorProfile.swift in Sources */,
 				A4B9C0242315DB19004A5C7C /* Session.swift in Sources */,
