@@ -28,10 +28,19 @@ struct AHTabbedView: View {
                     Image(systemName: "3.square.fill")
                     Text("Doctors")
                 }
-                ProfilePage(viewModel: ProfilePageViewModel())
-                .tabItem {
-                    Image(systemName: "4.square.fill")
-                    Text("My Profile")
+                if UserDefaultsManager.shared.isUserADoctor() {
+                    DoctorProfilePage(viewModel: DoctorPageViewModel())
+                    .tabItem {
+                        Image(systemName: "4.square.fill")
+                        Text("My Profile")
+                    }
+                }
+                else {
+                    ClientProfilePage(viewModel: ProfilePageViewModel())
+                    .tabItem {
+                        Image(systemName: "4.square.fill")
+                        Text("My Profile")
+                    }
                 }
             }
             .edgesIgnoringSafeArea(.top)

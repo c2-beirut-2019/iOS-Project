@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct ProfilePage: View {
+struct ClientProfilePage: View {
     
     @ObservedObject var viewModel: ProfilePageViewModel
-    
+
     @State var showImagePicker: Bool = false
     @State var showImageEditor: Bool = false
     @State var chosenimage: UIImage? = nil
@@ -31,24 +31,7 @@ struct ProfilePage: View {
             NavigationView {
                 Form {
                     Section() {
-                        HStack(alignment: .center) {
-                            if self.finalImage != nil {
-                                ProfileImageView(localImage: self.finalImage)
-                                .onTapGesture {
-                                    self.showImagePicker.toggle()
-                                }
-                            }
-                            else {
-                                ProfileURLImageView(serverImage: self.viewModel.avatar)
-                                .onTapGesture {
-                                    self.showImagePicker.toggle()
-                                }
-                            }
-                            Text(self.viewModel.userName)
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .padding(.horizontal, 15)
-                        }
+                        ProfileHeader(finalImage: self.$finalImage, showImagePicker: self.$showImagePicker, avatar: self.viewModel.avatar, userName: self.viewModel.userName)
                     }
                     Section() {
                         InputTextField(placeholder: "First Name", value: $firstName)
@@ -101,7 +84,7 @@ struct ProfilePage: View {
 #if DEBUG
 struct ProfilePage_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePage(viewModel: ProfilePageViewModel())
+        ClientProfilePage(viewModel: ProfilePageViewModel())
     }
 }
 #endif
