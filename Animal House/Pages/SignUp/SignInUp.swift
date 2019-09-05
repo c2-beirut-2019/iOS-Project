@@ -27,7 +27,7 @@ struct SignInUp: View {
                 })
                 .padding(.vertical, 10)
             }
-            NavigationLink(destination: AccessTokenPage(), tag: 2, selection: self.$selection) {
+            NavigationLink(destination: AccessTokenPage(viewModel: AccessTokenViewViewModel(type: self.entry.isDoctor ? AccessTokenType.doctor : AccessTokenType.client)), tag: 2, selection: self.$selection) {
                 RoundedButton(title: "SignUp", isDisabled: false, action: {
                     if self.entry.isDoctor {
                         self.entry.credentialsType = CredentialsPageType.doctorSignup

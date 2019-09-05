@@ -12,6 +12,7 @@ import Combine
 public enum DoctorProfileApi {
     case getProfile
     case updateProfile(bodyParameters: [String: Any])
+    case validateAccessCode(code: String)
     case createDoctor(accessCode: String, username: String, password: String)
     case login(username: String, password: String)
 }
@@ -22,6 +23,8 @@ extension DoctorProfileApi: EndPointType {
         switch self {
             case .getProfile, .updateProfile:
                 return "doctor/profile"
+            case .validateAccessCode:
+                return "doctor/code"
             case .createDoctor:
                 return "doctor/username"
             case .login:
@@ -33,7 +36,7 @@ extension DoctorProfileApi: EndPointType {
         switch self {
             case .getProfile:
                 return .get
-            case .updateProfile, .createDoctor, .login:
+        case .updateProfile, .createDoctor, .login, .validateAccessCode:
                 return .post
         }
     }
@@ -48,6 +51,10 @@ extension DoctorProfileApi: EndPointType {
                 return .requestParametersAndHeaders(bodyParameters: bodyParameters,
                                                     bodyEncoding: .jsonEncoding,
                                                     urlParameters: [:], additionHeaders: headers)
+            case .validateAccessCode(let code):
+                return .requestParametersAndHeaders(bodyParameters: ["accessCode": code],
+                                                    bodyEncoding: .jsonEncoding,
+                                                    urlParameters: [:], additionHeaders: nil)
             case .createDoctor(let accessCode, let username, let password):
                 return .requestParametersAndHeaders(bodyParameters: ["accessCode": accessCode, "username": username, "password": password],
                                                     bodyEncoding: .jsonEncoding,
@@ -68,6 +75,7 @@ extension DoctorProfileApi: EndPointType {
 protocol DoctorProfileService {
     func getProfile() -> Future<DoctorProfile, Error>
     func updateProfile(parameters: [String: Any]) -> Future<DoctorProfile, Error>
+    func validateAccessCode(code: String)
     func createUser(accessCode: String, username: String, password: String) -> Future<Session, Error>
     func login(username: String, password: String) -> Future<Session, Error>
 }

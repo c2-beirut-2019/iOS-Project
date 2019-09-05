@@ -48,7 +48,7 @@ struct CredentialsPage: View {
             UserDefaultsManager.shared.setUserADoctor(isDoctor: self.entry.isDoctor)
             UserDefaultsManager.shared.setUserLoggedIn(isLogged: true)
             UserDefaultsManager.shared.setAuthToken(token: session.access_token!)
-            UserDefaultsManager.shared.setExpiry(seconds: 0)
+            UserDefaultsManager.shared.setExpiry(seconds: session.expires_in!)
             UserDefaultsManager.shared.setRefreshToken(token: session.refresh_token!)
             UserDefaultsManager.shared.setRefreshTokenHeader(token: session.refresh_token_header!)
             let tabView = AHTabbedView()

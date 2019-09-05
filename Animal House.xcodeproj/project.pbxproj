@@ -58,6 +58,7 @@
 		A4A8D6F4231DC2EA0045193E /* DoctorsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A8D6F3231DC2EA0045193E /* DoctorsEndPoint.swift */; };
 		A4A8D6F6231DC3C80045193E /* DoctorsListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A8D6F5231DC3C80045193E /* DoctorsListPage.swift */; };
 		A4A8D6F9231DC4200045193E /* DoctorsListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A8D6F8231DC4200045193E /* DoctorsListViewViewModel.swift */; };
+		A4AF2CFC2321705700DFDC38 /* AccessTokenViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF2CFB2321705700DFDC38 /* AccessTokenViewViewModel.swift */; };
 		A4B0F512230DEC3000E902A9 /* PetsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */; };
 		A4B0F515230DED0100E902A9 /* PetsToAdoptListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F514230DED0100E902A9 /* PetsToAdoptListPage.swift */; };
 		A4B0F517230DED5C00E902A9 /* PetsToAdoptListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */; };
@@ -151,6 +152,7 @@
 		A4A8D6F3231DC2EA0045193E /* DoctorsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsEndPoint.swift; sourceTree = "<group>"; };
 		A4A8D6F5231DC3C80045193E /* DoctorsListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListPage.swift; sourceTree = "<group>"; };
 		A4A8D6F8231DC4200045193E /* DoctorsListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListViewViewModel.swift; sourceTree = "<group>"; };
+		A4AF2CFB2321705700DFDC38 /* AccessTokenViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenViewViewModel.swift; sourceTree = "<group>"; };
 		A4B0F511230DEC3000E902A9 /* PetsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsEndPoint.swift; sourceTree = "<group>"; };
 		A4B0F514230DED0100E902A9 /* PetsToAdoptListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsToAdoptListPage.swift; sourceTree = "<group>"; };
 		A4B0F516230DED5C00E902A9 /* PetsToAdoptListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsToAdoptListViewModel.swift; sourceTree = "<group>"; };
@@ -259,7 +261,7 @@
 				A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */,
 				A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */,
 				A43B96742316DFFD0064F6DC /* SignInUp.swift */,
-				A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */,
+				A4AF2CFD2321705D00DFDC38 /* AccessTokenPage */,
 				A48E719B23144EB5006A9531 /* CredentialsPage */,
 			);
 			path = SignUp;
@@ -435,6 +437,23 @@
 			isa = PBXGroup;
 			children = (
 				A4A8D6F8231DC4200045193E /* DoctorsListViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4AF2CFD2321705D00DFDC38 /* AccessTokenPage */ = {
+			isa = PBXGroup;
+			children = (
+				A4AF2CFE2321706900DFDC38 /* ViewModel */,
+				A43F272A22FA2B9900F21B70 /* AccessTokenPage.swift */,
+			);
+			path = AccessTokenPage;
+			sourceTree = "<group>";
+		};
+		A4AF2CFE2321706900DFDC38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4AF2CFB2321705700DFDC38 /* AccessTokenViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -744,6 +763,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B0F515230DED0100E902A9 /* PetsToAdoptListPage.swift in Sources */,
+				A4AF2CFC2321705700DFDC38 /* AccessTokenViewViewModel.swift in Sources */,
 				A434CDF92311ECB600C43658 /* ProfileImageView.swift in Sources */,
 				A44221AB22F39C300052F131 /* JSONParameterEncoder.swift in Sources */,
 				A4B0F517230DED5C00E902A9 /* PetsToAdoptListViewModel.swift in Sources */,
