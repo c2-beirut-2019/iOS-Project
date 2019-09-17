@@ -37,8 +37,13 @@ class ApointmentsListViewViewModel: ObservableObject {
     func getAppointments() {
         self.isLoading = true
 
-        self.sut = NetworkManager.sharedInstance.request(endPointType: UserProfileApi.appointmentsList)
-        
+        if UserDefaultsManager.shared.isUserADoctor() {
+            self.sut = NetworkManager.sharedInstance.request(endPointType: DoctorProfileApi.appointmentsList)
+        }
+        else {
+            self.sut = NetworkManager.sharedInstance.request(endPointType: UserProfileApi.appointmentsList)
+        }
+                
         self.cancellable = sut!
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in

@@ -14,6 +14,8 @@ struct AppointmentViewModel: Identifiable {
     fileprivate var appointment: AppointmentModel!
     fileprivate var dateFormatter = DateFormatter()
     
+    var isDoctor = UserDefaultsManager.shared.isUserADoctor()
+    
     init(appointment: AppointmentModel) {
         self.appointment = appointment
         dateFormatter.dateFormat = "h:m a"
@@ -31,7 +33,11 @@ extension AppointmentViewModel {
     }
     
     var doctorFullName: String {
-        return self.appointment.doctor_firstName! + " " + self.appointment.doctor_lastName!
+        return (self.appointment.doctor_firstName ?? "") + " " + (self.appointment.doctor_lastName ?? "")
+    }
+    
+    var customerFullName: String {
+        return (self.appointment.user_firstName ?? "") + " " + (self.appointment.user_lastName ?? "")
     }
     
 //    var date: String {

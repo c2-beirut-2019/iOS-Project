@@ -18,16 +18,24 @@ struct AppointmentCellView: View {
     var body: some View {
         VStack {
             ProfileHeader(finalImage: self.$finalImage, showImagePicker: self.$showImagePicker, avatar: self.appointmentCellModel.petImage, userName: self.appointmentCellModel.petName)
-            HStack {
-                Text("Doctor: ").fixedSize()
-                Text(self.appointmentCellModel.doctorFullName).fixedSize()
+            if !appointmentCellModel.isDoctor {
+                HStack {
+                    Text("Doctor: ").fixedSize()
+                    Text(self.appointmentCellModel.doctorFullName).fixedSize()
+                }
+                .padding(.vertical, 5)
+                HStack {
+                    Text("Speciality: ").fixedSize()
+                    Text(self.appointmentCellModel.doctorSpeciality).fixedSize()
+                }
+                .padding(.vertical, 5)
             }
-            .padding(.vertical, 5)
-            HStack {
-                Text("Speciality: ").fixedSize()
-                Text(self.appointmentCellModel.doctorSpeciality).fixedSize()
+            else {
+                HStack {
+                    Text("Customer: ").fixedSize()
+                    Text(self.appointmentCellModel.customerFullName).fixedSize()
+                }
             }
-            .padding(.vertical, 5)
             HStack {
                 Text("State Date: ").fixedSize()
                 Text(self.appointmentCellModel.startDate).fixedSize()

@@ -15,6 +15,7 @@ public enum DoctorProfileApi {
     case validateAccessCode(code: String)
     case createDoctor(accessCode: String, username: String, password: String)
     case login(username: String, password: String)
+    case appointmentsList
 }
 
 extension DoctorProfileApi: EndPointType {
@@ -29,14 +30,16 @@ extension DoctorProfileApi: EndPointType {
                 return "doctor/username"
             case .login:
                 return "doctor/authenticate"
+            case .appointmentsList:
+                return "appointment/doctorAppointment"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-            case .getProfile:
+        case .getProfile, .appointmentsList:
                 return .get
-        case .updateProfile, .createDoctor, .login, .validateAccessCode:
+            case .updateProfile, .createDoctor, .login, .validateAccessCode:
                 return .post
         }
     }
@@ -63,6 +66,10 @@ extension DoctorProfileApi: EndPointType {
                 return .requestParameters(bodyParameters: ["grant_type": "password", "username": username, "password": password],
                                                     bodyEncoding: .jsonBodyUrlEncoded,
                                                     urlParameters: [:])
+            case .appointmentsList:
+                 return .requestParametersAndHeaders(bodyParameters: nil,
+                                           bodyEncoding: .urlEncoding,
+                                           urlParameters: [:], additionHeaders: headers)
         }
     }
     
@@ -78,4 +85,5 @@ protocol DoctorProfileService {
     func validateAccessCode(code: String)
     func createUser(accessCode: String, username: String, password: String) -> Future<Session, Error>
     func login(username: String, password: String) -> Future<Session, Error>
+    func getAppointmentsList() -> Future<[AppointmentModel], Error>
 }

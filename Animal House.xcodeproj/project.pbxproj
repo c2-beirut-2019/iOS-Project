@@ -268,10 +268,10 @@
 			children = (
 				A43F272E22FA2BF700F21B70 /* SignUp */,
 				A4632145230365280063B9F9 /* AHTabbedView.swift */,
-				A4B94EA7232FFEE700952520 /* AppointmentsListPage */,
 				A4B0F513230DECEC00E902A9 /* News */,
 				A4B0F518230DEE1000E902A9 /* PetsToAdoptListPage */,
 				A4A8D6F7231DC3CE0045193E /* DoctorsListPage */,
+				A4B94EA7232FFEE700952520 /* AppointmentsListPage */,
 				A46C6617230F50180071D5B6 /* ProfilePage */,
 			);
 			path = Pages;
