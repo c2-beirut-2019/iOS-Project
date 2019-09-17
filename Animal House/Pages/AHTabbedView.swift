@@ -28,17 +28,22 @@ struct AHTabbedView: View {
                     Image(systemName: "3.square.fill")
                     Text("Doctors")
                 }
+                AppointmentsListPage(viewModel: ApointmentsListViewViewModel())
+                .tabItem {
+                    Image(systemName: "4.square.fill")
+                    Text("Appointments")
+                }
                 if UserDefaultsManager.shared.isUserADoctor() {
                     DoctorProfilePage(viewModel: DoctorPageViewModel())
                     .tabItem {
-                        Image(systemName: "4.square.fill")
+                        Image(systemName: "5.square.fill")
                         Text("My Profile")
                     }
                 }
                 else {
                     ClientProfilePage(viewModel: ProfilePageViewModel())
                     .tabItem {
-                        Image(systemName: "4.square.fill")
+                        Image(systemName: "5.square.fill")
                         Text("My Profile")
                     }
                 }

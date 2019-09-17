@@ -8,6 +8,7 @@ target 'Animal House' do
   # Pods for Animal House
   pod 'YPImagePicker'
   pod 'CropViewController'
+  pod 'FSCalendar'
 
   target 'Animal HouseTests' do
     inherit! :search_paths

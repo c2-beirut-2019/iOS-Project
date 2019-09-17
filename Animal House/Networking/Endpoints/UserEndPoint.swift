@@ -15,6 +15,7 @@ public enum UserProfileApi {
     case validateAccessCode(code: String)
     case createUser(accessCode: String, username: String, password: String)
     case login(username: String, password: String)
+    case appointmentsList
 }
 
 extension UserProfileApi: EndPointType {
@@ -29,14 +30,16 @@ extension UserProfileApi: EndPointType {
                 return "client/username"
             case .login:
                 return "client/authenticate"
+            case .appointmentsList:
+                return "appointment/userAppointment"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
-            case .getProfile:
+            case .getProfile, .appointmentsList:
                 return .get
-        case .updateProfile, .createUser, .login, .validateAccessCode:
+            case .updateProfile, .createUser, .login, .validateAccessCode:
                 return .post
         }
     }
@@ -63,6 +66,10 @@ extension UserProfileApi: EndPointType {
                 return .requestParameters(bodyParameters: ["grant_type": "password", "username": username, "password": password],
                                                     bodyEncoding: .jsonBodyUrlEncoded,
                                                     urlParameters: [:])
+            case .appointmentsList:
+                return .requestParametersAndHeaders(bodyParameters: nil,
+                                          bodyEncoding: .urlEncoding,
+                                          urlParameters: [:], additionHeaders: headers)
         }
     }
     
@@ -78,4 +85,5 @@ protocol UserProfileService {
     func validateAccessCode(code: String)
     func createUser(accessCode: String, username: String, password: String) -> Future<EmptyResponse, Error>
     func login(username: String, password: String) -> Future<Session, Error>
+    func getAppointmentsList() -> Future<[AppointmentModel], Error>
 }
