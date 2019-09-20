@@ -53,6 +53,14 @@ struct ClientProfilePage: View {
                         })
                 }
                 .navigationBarTitle(self.viewModel.title)
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        let entry = Entry()
+                        let letsStartPage = LetsStartPage().environmentObject(entry)
+                        UIApplication.shared.windows[0].setRootView(rootView: letsStartPage)
+                    }) {
+                        Text("Logout")
+                    })
                 .onReceive(self.viewModel.objectWillChange) { (userProfile) in
                     self.isButtonLoading = false
                     
