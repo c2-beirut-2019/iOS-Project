@@ -12,21 +12,47 @@ struct PetsToAdoptListPage: View {
 
     @ObservedObject var viewModel: PetsToAdoptListViewModel
 
+    @State private var selectedIndex = 0
+    @State private var numbers = ["To Adopt", "My Pets"]
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(self.viewModel.pets) { pet in
-                    PetAdoptCellView(viewModel: pet)
+            VStack {
+                Picker("Numbers", selection: $selectedIndex) {
+                      ForEach(0 ..< numbers.count) { index in
+                          Text(self.numbers[index]).tag(index)
+                    }
                 }
-                if !self.viewModel.isEndPagination {
-                    LoadingRow(isLoading: true).onAppear {
-                        if !self.viewModel.isLoading {
-                            self.viewModel.getPetsToAdopt(isPage: true)
+                .pickerStyle(SegmentedPickerStyle())
+                .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
+
+                if selectedIndex == 0 {
+                    List {
+                        ForEach(self.viewModel.petsToAdopt) { pet in
+                            PetAdoptCellView(viewModel: pet)
+                        }
+                        if !self.viewModel.isEndPagination {
+                            LoadingRow(isLoading: true).onAppear {
+                                if !self.viewModel.isLoading {
+                                    self.viewModel.getPetsToAdopt(isPage: true)
+                                }
+                            }
+                        }
+                    }
+                }
+                else {
+                    List {
+                        ForEach(self.viewModel.mypets) { pet in
+                            PetAdoptCellView(viewModel: pet)
+                        }
+                        if self.viewModel.isLoadingMyPets {
+                            LoadingRow(isLoading: true).onAppear {
+                                
+                            }
                         }
                     }
                 }
             }
-            .navigationBarTitle(Text(self.viewModel.title))
         }
         .onAppear {
             guard !self.viewModel.didAppear else {
@@ -34,6 +60,7 @@ struct PetsToAdoptListPage: View {
             }
             self.viewModel.didAppear = true
             self.viewModel.getPetsToAdopt(isPage: false)
+            self.viewModel.getMyPets()
         }
     }
     

@@ -11,6 +11,7 @@ import Combine
 
 public enum PetsApi {
     case petsToAdopt(paginationURL: String)
+    case myPets
 }
 
 extension PetsApi: EndPointType {
@@ -19,14 +20,13 @@ extension PetsApi: EndPointType {
         switch self {
             case .petsToAdopt(let paginationURL):
                 return "pet/toAdopt?" + paginationURL
+            case .myPets:
+                return "pet/client"
         }
     }
     
     var httpMethod: HTTPMethod {
-        switch self {
-            case .petsToAdopt:
-                return .get
-        }
+        return .get
     }
     
     var task: HTTPTask {
@@ -35,15 +35,20 @@ extension PetsApi: EndPointType {
                 return .requestParametersAndHeaders(bodyParameters: nil,
                                           bodyEncoding: .urlEncoding,
                                           urlParameters: [:], additionHeaders: nil)
+            case .myPets:
+                return .requestParametersAndHeaders(bodyParameters: nil,
+                                          bodyEncoding: .urlEncoding,
+                                          urlParameters: [:], additionHeaders: headers)
         }
     }
     
     var headers: HTTPHeaders? {
-        return nil
+        return ["Authorization": UserDefaultsManager.shared.getAuthToken()]
     }
     
 }
 
 protocol PetsService {
     func getPetsToAdopt(paginationURL: String) -> Future<PaginationListModel<PetModel>, Error>
+    func getMyPets() -> Future<[PetModel], Error>
 }

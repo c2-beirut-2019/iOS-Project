@@ -11,13 +11,15 @@ import Combine
 
 class PetsToAdoptListViewModel: ObservableObject {
 
-    var title = "Pets to adopt"
+    var title = "Pets"
     
-    @Published var pets: [PetAdoptCellViewViewModel] = [PetAdoptCellViewViewModel]()
-
+    @Published var petsToAdopt: [PetAdoptCellViewViewModel] = [PetAdoptCellViewViewModel]()
+    @Published var mypets: [PetAdoptCellViewViewModel] = [PetAdoptCellViewViewModel]()
+    
     var didAppear = false
     
     var isLoading: Bool = false
+    var isLoadingMyPets = true
     
     /// Bindable Property used for ending the pagination loading view
     @Published var isEndPagination: Bool = false
@@ -28,7 +30,8 @@ class PetsToAdoptListViewModel: ObservableObject {
         return "page=\(pageIndex)&limit=\(limit)"
     }
     
-    var sut: Future<PaginationListModel<PetModel>, Error>?
+    var petsToAdoptSut: Future<PaginationListModel<PetModel>, Error>?
+    var mypetsSut: Future<[PetModel], Error>?
     var cancellable: AnyCancellable?
     
     //MARK: - Setup
@@ -46,9 +49,9 @@ class PetsToAdoptListViewModel: ObservableObject {
             self.pageIndex = 1
         }
 
-        self.sut = NetworkManager.sharedInstance.request(endPointType: PetsApi.petsToAdopt(paginationURL: next))
+        self.petsToAdoptSut = NetworkManager.sharedInstance.request(endPointType: PetsApi.petsToAdopt(paginationURL: next))
         
-        self.cancellable = sut!
+        self.cancellable = petsToAdoptSut!
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { completion in
             if case let .failure(error) = completion {
@@ -63,20 +66,39 @@ class PetsToAdoptListViewModel: ObservableObject {
             }
             
             if isPage {
-                self.pets.append(contentsOf: viewModels)
+                self.petsToAdopt.append(contentsOf: viewModels)
             }
             else {
-                self.pets.removeAll()
-                self.pets = viewModels
+                self.petsToAdopt.removeAll()
+                self.petsToAdopt = viewModels
             }
-            if self.pets.count < petsListModel.totalCount! {
+            if self.petsToAdopt.count < petsListModel.totalCount! {
                 self.pageIndex += 1
             }
             else {
                 self.isEndPagination = true
             }
         })
+    }
+    
+    func getMyPets() {
+        self.mypetsSut = NetworkManager.sharedInstance.request(endPointType: PetsApi.myPets)
         
-        
+        self.cancellable = mypetsSut!
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+            if case let .failure(error) = completion {
+                print(error)
+            }
+
+        }, receiveValue: { petsListModel in
+            var viewModels = [PetAdoptCellViewViewModel]()
+            for each in petsListModel {
+                viewModels.append(PetAdoptCellViewViewModel(petModel: each))
+            }
+            
+            self.isLoadingMyPets = false
+            self.mypets = viewModels
+        })
     }
 }
