@@ -15,27 +15,29 @@ struct NewsCellView: View {
     
     var body: some View {
         NavigationLink(destination: NewDetailsPage(news: self.newsCellModel)) {
-            HStack() {
+            HStack(alignment: .top) {
                 URLImage(URL(string: newsCellModel.image)!, placeholder: Image(systemName: "circle"))
                     .resizable()
                     .frame(width: 90, height: 90)
                     .padding(.vertical, 8)
                     .padding(.horizontal, 8)
-                    .scaledToFill()
-                VStack (alignment: .leading) {
-                    Text(newsCellModel.title)
-                    .font(.headline)
-                    Text(newsCellModel.content)
-                    .font(.subheadline)
-                    
-                }
-                Spacer(minLength: 8)
-                VStack(alignment: .trailing) {
-                    Text(newsCellModel.date)
+                    .aspectRatio(1, contentMode: .fill)
+                VStack(alignment: .leading) {
+                    HStack() {
+                        Spacer()
+                        Text(newsCellModel.date)
                         .font(.caption)
-                    .offset(x: 0, y: -40)
+                        .fixedSize()
+                    }
+                    VStack(alignment: .leading) {
+                        Text(newsCellModel.title)
+                        .font(.headline)
+                        .lineLimit(2)
+                        Text(newsCellModel.content)
+                        .font(.subheadline)
+                        .lineLimit(2)
+                    }
                 }
-                .padding(.horizontal, 8)
             }
             .frame(height: 106, alignment: .leading)
         }

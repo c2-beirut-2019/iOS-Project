@@ -14,40 +14,45 @@ struct NewDetailsPage: View {
     var news: NewsCellViewViewModel!
     
     var body: some View {
-        ScrollView {
-            VStack {
-                URLImage(URL(string: news.image)!, placeholder: Image(systemName: "circle"))
-                    .resizable()
-                    .aspectRatio(2, contentMode: .fill)
-                    .clipped()
-                HStack {
-                    Spacer()
-                    Text(self.news.date)
-                    .font(.caption)
-                    .padding(10)
-                }
-                VStack(alignment: .leading) {
+        GeometryReader { geo in
+            ScrollView {
+                VStack {
                     HStack {
                         Text(self.news.title)
                         .multilineTextAlignment(.leading)
                         .font(.headline)
                         .lineLimit(nil)
-                        .padding(10)
+//                        .padding(10)
+                        .fixedSize(horizontal: false, vertical: true)
                         Spacer()
                     }
+                    .padding(10)
+                    URLImage(URL(string: self.news.image)!, placeholder: Image(systemName: "circle"))
+                        .resizable()
+                        .clipped()
+                        .aspectRatio(2, contentMode: .fill)
+                        .frame(width: geo.size.width, height: 0.5*geo.size.width)
                     HStack {
-                        Text(self.news.content)
-                        .multilineTextAlignment(.leading)
-                        .font(.subheadline)
-                        .lineLimit(nil)
-                        .padding(10)
                         Spacer()
+                        Text(self.news.date)
+                        .font(.caption)
+                        .padding(10)
                     }
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(self.news.content)
+                            .multilineTextAlignment(.leading)
+                            .font(.subheadline)
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+                            Spacer()
+                        }
+                    }
+                    .padding(10)
                 }
             }
-            Spacer()
+            .navigationBarTitle(Text("Details"), displayMode: .inline)
         }
-        .navigationBarTitle(Text("Details"), displayMode: .inline)
     }
 }
 
