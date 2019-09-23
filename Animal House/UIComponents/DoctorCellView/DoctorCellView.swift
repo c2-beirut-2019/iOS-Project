@@ -15,20 +15,13 @@ struct DoctorCellView: View {
     var body: some View {
         HStack() {
             VStack (alignment: .leading) {
-                Text(doctorCellModel.fullName)
-                .font(.headline)
-                    .padding(.vertical, 4)
-                Text(doctorCellModel.speciality)
-                .font(.subheadline)
-                .padding(.vertical, 4)
+                LineInfoView(key: "Name", value: doctorCellModel.fullName)
+                .padding(.vertical, 5)
+                LineInfoView(key: "Speciality", value: doctorCellModel.speciality)
+                .padding(.vertical, 5)
+                LineInfoView(key: "Diplomas", value: doctorCellModel.diplomas)
+                .padding(.vertical, 5)
             }
-            .padding()
-            Spacer(minLength: 8)
-            VStack(alignment: .trailing) {
-                Text(doctorCellModel.diplomas)
-                .offset(x: 0, y: -25)
-            }
-            .padding(.horizontal, 8)
         }
     }
 }

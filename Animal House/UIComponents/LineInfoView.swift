@@ -10,12 +10,12 @@ import SwiftUI
 
 struct LineInfoView: View {
     
-    var key: String = "Name"
-    var value: String = "Lexi"
+    var key: String!
+    var value: String!
     
     var body: some View {
         HStack {
-            Text(key + ":")
+            Text(key + ": ")
                 .font(.headline)
             Text(value)
                 .font(.subheadline)
