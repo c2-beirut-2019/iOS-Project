@@ -32,7 +32,7 @@ struct AppointmentsListPage: View {
                                 AppointmentCellView(showImagePicker: false, finalImage: nil, appointmentCellModel: ap)
                                     .rotation3DEffect(Angle(degrees: Double((geometry2.frame(in: .global).minX - self.tileWidth*0.5) / -10 )), axis: (x: 2, y: 11, z: 1))
                                     .onTapGesture {
-                                        print ("tap on index: \(index)")
+
                                     }
                             }
                         }
