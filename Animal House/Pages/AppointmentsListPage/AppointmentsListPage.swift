@@ -22,21 +22,27 @@ struct AppointmentsListPage: View {
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
-                List {
-                    RGCalendar(apppointmentsList: self.viewModel.appointments, date: self.$date)
-                        .frame(height: 300, alignment: .top)
-                    
-                    RGPagingScrollView(activePageIndex: self.$activePageIndex, itemCount:self.viewModel.aps.filter{ Calendar.current.isDate($0.date.animalHouseDate(), inSameDayAs: self.date) }.count ,pageWidth:geometry.size.width, tileWidth:self.tileWidth, tilePadding: self.tilePadding){
-                        ForEach(self.viewModel.aps.filter{ Calendar.current.isDate($0.date.animalHouseDate(), inSameDayAs: self.date) }) { ap in
-                            GeometryReader { geometry2 in
-                                AppointmentCellView(showImagePicker: false, finalImage: nil, appointmentCellModel: ap)
-                                    .rotation3DEffect(Angle(degrees: Double((geometry2.frame(in: .global).minX - self.tileWidth*0.5) / -10 )), axis: (x: 2, y: 11, z: 1))
-                                    .onTapGesture {
+                if UserDefaultsManager.shared.isUserLoggedIn() {
+                    List {
+                        RGCalendar(apppointmentsList: self.viewModel.appointments, date: self.$date)
+                            .frame(height: 300, alignment: .top)
+                        
+                        RGPagingScrollView(activePageIndex: self.$activePageIndex, itemCount:self.viewModel.aps.filter{ Calendar.current.isDate($0.date.animalHouseDate(), inSameDayAs: self.date) }.count ,pageWidth:geometry.size.width, tileWidth:self.tileWidth, tilePadding: self.tilePadding){
+                            ForEach(self.viewModel.aps.filter{ Calendar.current.isDate($0.date.animalHouseDate(), inSameDayAs: self.date) }) { ap in
+                                GeometryReader { geometry2 in
+                                    AppointmentCellView(showImagePicker: false, finalImage: nil, appointmentCellModel: ap)
+                                        .rotation3DEffect(Angle(degrees: Double((geometry2.frame(in: .global).minX - self.tileWidth*0.5) / -10 )), axis: (x: 2, y: 11, z: 1))
+                                        .onTapGesture {
 
-                                    }
+                                        }
+                                }
                             }
-                        }
-                    }.frame(height: 300, alignment: .top)
+                        }.frame(height: 300, alignment: .top)
+                    }
+                }
+                else {
+                    FeaturePermission()
+                    Spacer()
                 }
             }
             .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
@@ -46,7 +52,9 @@ struct AppointmentsListPage: View {
                 return
             }
             self.viewModel.didAppear = true
-            self.viewModel.getAppointments()
+            if UserDefaultsManager.shared.isUserLoggedIn() {
+                self.viewModel.getAppointments()
+            }
         }
     }
     

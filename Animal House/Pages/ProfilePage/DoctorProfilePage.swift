@@ -26,56 +26,62 @@ struct DoctorProfilePage: View {
     var body: some View {
         ZStack {
             NavigationView {
-                Form {
-                    Section() {
-                        ProfileHeader(finalImage: self.$finalImage, showImagePicker: self.$showImagePicker, avatar: self.viewModel.avatar, userName: self.viewModel.userName)
+                if UserDefaultsManager.shared.isUserLoggedIn() {
+                    Form {
+                        Section() {
+                            ProfileHeader(finalImage: self.$finalImage, showImagePicker: self.$showImagePicker, avatar: self.viewModel.avatar, userName: self.viewModel.userName)
+                        }
+                        Section() {
+                            InputTextField(placeholder: "First Name", value: $firstName)
+                            InputTextField(placeholder: "Last Name", value: $lastName)
+                        }
+                        Section() {
+                            PhoneNumberTextField(mobileNumber: $mobileNumber)
+                        }
+                        Section(header: Text("Speciality")) {
+                            Text(self.viewModel.speciality)
+                                .font(.subheadline)
+                        }
+                        Section(header: Text("Diploma")) {
+                            Text(self.viewModel.diploma)
+                                .font(.subheadline)
+                        }
+                        RoundedButton(title: "Save", isDisabled: !self.viewModel.validateProfileInput(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber), isLoading: self.isButtonLoading, action: {
+                            self.isButtonLoading = true
+                            self.viewModel.updateProfile(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber, avatar: self.finalImage != nil ? self.chosenimage : nil)
+                            })
                     }
-                    Section() {
-                        InputTextField(placeholder: "First Name", value: $firstName)
-                        InputTextField(placeholder: "Last Name", value: $lastName)
-                    }
-                    Section() {
-                        PhoneNumberTextField(mobileNumber: $mobileNumber)
-                    }
-                    Section(header: Text("Speciality")) {
-                        Text(self.viewModel.speciality)
-                            .font(.subheadline)
-                    }
-                    Section(header: Text("Diploma")) {
-                        Text(self.viewModel.diploma)
-                            .font(.subheadline)
-                    }
-                    RoundedButton(title: "Save", isDisabled: !self.viewModel.validateProfileInput(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber), isLoading: self.isButtonLoading, action: {
-                        self.isButtonLoading = true
-                        self.viewModel.updateProfile(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber, avatar: self.finalImage != nil ? self.chosenimage : nil)
+                    .navigationBarItems(trailing:
+                        Button(action: {
+                            AppDelegate.sharedDelegate().logout()
+                        }) {
+                            Text("Logout")
                         })
-                }
-                .navigationBarTitle(self.viewModel.title)
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        let entry = Entry()
-                        let letsStartPage = LetsStartPage().environmentObject(entry)
-                        UIApplication.shared.windows[0].setRootView(rootView: letsStartPage)
-                    }) {
-                        Text("Logout")
+                    .onReceive(self.viewModel.objectWillChange) { (userProfile) in
+                        self.isButtonLoading = false
+                        
+                        self.firstName = self.viewModel.firstName
+                        self.lastName = self.viewModel.lastName
+                        self.mobileNumber = self.viewModel.mobileNumber
+                    }
+                    .sheet(isPresented: $showImageEditor, content: {
+                        RGImageEditor(isShown: self.$showImageEditor, inputImage: self.chosenimage, outputImage: self.$finalImage).edgesIgnoringSafeArea(.all)
                     })
-                .onReceive(self.viewModel.objectWillChange) { (userProfile) in
-                    self.isButtonLoading = false
-                    
-                    self.firstName = self.viewModel.firstName
-                    self.lastName = self.viewModel.lastName
-                    self.mobileNumber = self.viewModel.mobileNumber
                 }
-                .sheet(isPresented: $showImageEditor, content: {
-                    RGImageEditor(isShown: self.$showImageEditor, inputImage: self.chosenimage, outputImage: self.$finalImage).edgesIgnoringSafeArea(.all)
-                })
+                else {
+                    FeaturePermission()
+                    Spacer()
+                }
             }
+            .navigationBarTitle(self.viewModel.title)
             .onAppear {
                 guard !self.viewModel.didAppear else {
                     return
                 }
                 self.viewModel.didAppear = true
-                self.viewModel.getProfile()
+                if UserDefaultsManager.shared.isUserLoggedIn() {
+                    self.viewModel.getProfile()
+                }
             }
             .sheet(isPresented: $showImagePicker, content: {
                 RGImagePicker(isShown: self.$showImagePicker, isShowEditor: self.$showImageEditor, image: self.$chosenimage).edgesIgnoringSafeArea(.all)

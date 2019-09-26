@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
     
+    func logout() {
+        UserDefaultsManager.shared.setUserLoggedIn(isLogged: false)
+        UserDefaultsManager.shared.setAuthToken(token: "")
+        let entry = Entry()
+        let letsStartPage = SignInUp().environmentObject(entry)
+        UIApplication.shared.windows[0].setRootView(rootView: letsStartPage)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

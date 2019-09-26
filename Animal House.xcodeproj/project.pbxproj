@@ -10,7 +10,6 @@
 		1B51EAF34A0883328FE1EFA3 /* Pods_Animal_House.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1EB50CE2EB3EB133CDFE02 /* Pods_Animal_House.framework */; };
 		8B5BA74C71F3C5BCEC87C457 /* Pods_Animal_HouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE277B5565FEA5F15CBAB5D /* Pods_Animal_HouseTests.framework */; };
 		A40D09CC23218A52001935C2 /* DoctorProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40D09CB23218A52001935C2 /* DoctorProfilePage.swift */; };
-		A411D67A22FB686500CCD600 /* test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A411D67922FB686500CCD600 /* test.jpeg */; };
 		A411D68022FB73E700CCD600 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A411D67E22FB73E700CCD600 /* NewsModel.swift */; };
 		A41D177A2310BD3000512FB5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41D17792310BD3000512FB5 /* String.swift */; };
 		A41D177C2310C19F00512FB5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41D177B2310C19F00512FB5 /* Date.swift */; };
@@ -36,6 +35,9 @@
 		A44221B422F39CFE0052F131 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44221B322F39CFE0052F131 /* Data.swift */; };
 		A449EF932321875700887207 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449EF922321875700887207 /* ProfileHeader.swift */; };
 		A4507D76232F23CE003BBE59 /* RGCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4507D75232F23CE003BBE59 /* RGCalendar.swift */; };
+		A4514D05233C1EA00082C79B /* ContainerCredentialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4514D04233C1EA00082C79B /* ContainerCredentialsView.swift */; };
+		A4514D07233C25B50082C79B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4514D06233C25B50082C79B /* Config.swift */; };
+		A4514D09233C34490082C79B /* FeaturePermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4514D08233C34490082C79B /* FeaturePermission.swift */; };
 		A454D9AF2311F31700C84352 /* RGImageEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454D9AE2311F31700C84352 /* RGImageEditor.swift */; };
 		A454D9B12312098000C84352 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454D9B02312098000C84352 /* UIImage.swift */; };
 		A454D9B323133CAE00C84352 /* RGActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A454D9B223133CAE00C84352 /* RGActivityIndicator.swift */; };
@@ -85,7 +87,6 @@
 		A4E0255D22FE3FE800B3F443 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0255C22FE3FE800B3F443 /* CustomDatePicker.swift */; };
 		A4E4CDA022F23ACE00D1333E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */; };
 		A4E4CDA222F23ACE00D1333E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */; };
-		A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */; };
 		A4E4CDA622F23AD100D1333E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA522F23AD100D1333E /* Assets.xcassets */; };
 		A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */; };
 		A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */; };
@@ -113,7 +114,6 @@
 		9EECDA41DFFFCB7DD1515A80 /* Pods-Animal HouseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal HouseTests.debug.xcconfig"; path = "Target Support Files/Pods-Animal HouseTests/Pods-Animal HouseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FBE38F5E133D5614120BAB9 /* Pods-Animal House.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animal House.release.xcconfig"; path = "Target Support Files/Pods-Animal House/Pods-Animal House.release.xcconfig"; sourceTree = "<group>"; };
 		A40D09CB23218A52001935C2 /* DoctorProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorProfilePage.swift; sourceTree = "<group>"; };
-		A411D67922FB686500CCD600 /* test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpeg; sourceTree = "<group>"; };
 		A411D67E22FB73E700CCD600 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		A41D17792310BD3000512FB5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A41D177B2310C19F00512FB5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -139,6 +139,9 @@
 		A44221B322F39CFE0052F131 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		A449EF922321875700887207 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		A4507D75232F23CE003BBE59 /* RGCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGCalendar.swift; sourceTree = "<group>"; };
+		A4514D04233C1EA00082C79B /* ContainerCredentialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCredentialsView.swift; sourceTree = "<group>"; };
+		A4514D06233C25B50082C79B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A4514D08233C34490082C79B /* FeaturePermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturePermission.swift; sourceTree = "<group>"; };
 		A454D9AE2311F31700C84352 /* RGImageEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGImageEditor.swift; sourceTree = "<group>"; };
 		A454D9B02312098000C84352 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		A454D9B223133CAE00C84352 /* RGActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGActivityIndicator.swift; sourceTree = "<group>"; };
@@ -190,7 +193,6 @@
 		A4E4CD9C22F23ACE00D1333E /* Animal House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animal House.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E4CD9F22F23ACE00D1333E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4E4CDA122F23ACE00D1333E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsStartPage.swift; sourceTree = "<group>"; };
 		A4E4CDA522F23AD100D1333E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E4CDA822F23AD100D1333E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4E4CDAB22F23AD100D1333E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -280,9 +282,9 @@
 		A43F272E22FA2BF700F21B70 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				A4E4CDA322F23ACE00D1333E /* LetsStartPage.swift */,
-				A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */,
 				A43B96742316DFFD0064F6DC /* SignInUp.swift */,
+				A43F273122FA2C5600F21B70 /* ChooseUserPage.swift */,
+				A4514D04233C1EA00082C79B /* ContainerCredentialsView.swift */,
 				A4AF2CFD2321705D00DFDC38 /* AccessTokenPage */,
 				A48E719B23144EB5006A9531 /* CredentialsPage */,
 			);
@@ -292,6 +294,7 @@
 		A43F272F22FA2C0400F21B70 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				A4514D08233C34490082C79B /* FeaturePermission.swift */,
 				A423E5B72330B0C000287E4D /* RGPagingScrollView.swift */,
 				A4D0B467230F72BB00EE9A35 /* RGImagePicker.swift */,
 				A449EF922321875700887207 /* ProfileHeader.swift */,
@@ -600,11 +603,11 @@
 				A411D68222FB73EA00CCD600 /* Models */,
 				A442218522F39C300052F131 /* Networking */,
 				A44221B222F39CDD0052F131 /* Extensions */,
-				A411D67922FB686500CCD600 /* test.jpeg */,
 				A43F272D22FA2BEB00F21B70 /* Pages */,
 				A43F272F22FA2C0400F21B70 /* UIComponents */,
 				A4E4CDA522F23AD100D1333E /* Assets.xcassets */,
 				A4C2C58C23184DF400D2AC44 /* UserDefaultsManager.swift */,
+				A4514D06233C25B50082C79B /* Config.swift */,
 				A4E4CDAA22F23AD100D1333E /* LaunchScreen.storyboard */,
 				A4E4CDAD22F23AD100D1333E /* Info.plist */,
 				A4E4CDA722F23AD100D1333E /* Preview Content */,
@@ -740,7 +743,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E4CDAC22F23AD100D1333E /* LaunchScreen.storyboard in Resources */,
-				A411D67A22FB686500CCD600 /* test.jpeg in Resources */,
 				A4E4CDA922F23AD100D1333E /* Preview Assets.xcassets in Resources */,
 				A4E4CDA622F23AD100D1333E /* Assets.xcassets in Resources */,
 			);
@@ -831,6 +833,7 @@
 				A4B0F517230DED5C00E902A9 /* PetsToAdoptListViewModel.swift in Sources */,
 				A43F272C22FA2B9900F21B70 /* CredentialsPage.swift in Sources */,
 				A4B0F512230DEC3000E902A9 /* PetsEndPoint.swift in Sources */,
+				A4514D05233C1EA00082C79B /* ContainerCredentialsView.swift in Sources */,
 				A454D9B12312098000C84352 /* UIImage.swift in Sources */,
 				A47ACF0822FE3A850005D760 /* ClientProfilePage.swift in Sources */,
 				A44221A922F39C300052F131 /* ParameterEncoding.swift in Sources */,
@@ -850,6 +853,7 @@
 				A4E6291B231DC15800E3A953 /* Doctor.swift in Sources */,
 				A44221AC22F39C300052F131 /* NetworkManager.swift in Sources */,
 				A47ACF0622FE36470005D760 /* PhoneNumberTextField.swift in Sources */,
+				A4514D09233C34490082C79B /* FeaturePermission.swift in Sources */,
 				A48B04F8230DE48500C86B7C /* NewsCellViewViewModel.swift in Sources */,
 				A46C661C230F51AC0071D5B6 /* UserEndPoint.swift in Sources */,
 				A46C6619230F50740071D5B6 /* ProfilePageViewModel.swift in Sources */,
@@ -894,13 +898,13 @@
 				A43F273222FA2C5600F21B70 /* ChooseUserPage.swift in Sources */,
 				A4632146230365280063B9F9 /* AHTabbedView.swift in Sources */,
 				A43F273922FB64C500F21B70 /* RoundedButton.swift in Sources */,
-				A4E4CDA422F23ACE00D1333E /* LetsStartPage.swift in Sources */,
 				A43F272B22FA2B9900F21B70 /* AccessTokenPage.swift in Sources */,
 				A46AFBAD232F1B800007202E /* AppointmentCellView.swift in Sources */,
 				A411D68022FB73E700CCD600 /* NewsModel.swift in Sources */,
 				A44221B422F39CFE0052F131 /* Data.swift in Sources */,
 				A467D83A23083D760007629A /* Error.swift in Sources */,
 				A43B96772316E0F10064F6DC /* Entry.swift in Sources */,
+				A4514D07233C25B50082C79B /* Config.swift in Sources */,
 				A4E0255D22FE3FE800B3F443 /* CustomDatePicker.swift in Sources */,
 				A41D177A2310BD3000512FB5 /* String.swift in Sources */,
 			);

@@ -41,15 +41,21 @@ struct PetsToAdoptListPage: View {
                     }
                 }
                 else {
-                    List {
-                        ForEach(self.viewModel.mypets) { pet in
-                            PetAdoptCellView(viewModel: pet)
-                        }
-                        if self.viewModel.isLoadingMyPets {
-                            LoadingRow(isLoading: true).onAppear {
-                                
+                    if UserDefaultsManager.shared.isUserLoggedIn() {
+                        List {
+                            ForEach(self.viewModel.mypets) { pet in
+                                PetAdoptCellView(viewModel: pet)
+                            }
+                            if self.viewModel.isLoadingMyPets {
+                                LoadingRow(isLoading: true).onAppear {
+                                    
+                                }
                             }
                         }
+                    }
+                    else {
+                        FeaturePermission()
+                        Spacer()
                     }
                 }
             }
@@ -60,7 +66,9 @@ struct PetsToAdoptListPage: View {
             }
             self.viewModel.didAppear = true
             self.viewModel.getPetsToAdopt(isPage: false)
-            self.viewModel.getMyPets()
+            if UserDefaultsManager.shared.isUserLoggedIn() {
+                self.viewModel.getMyPets()
+            }
         }
     }
     

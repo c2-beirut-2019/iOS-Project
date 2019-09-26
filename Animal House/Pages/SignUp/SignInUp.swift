@@ -12,34 +12,51 @@ struct SignInUp: View {
     
     @EnvironmentObject var entry: Entry
     @State var selection: Int? = nil
-
+    
     var body: some View {
-        VStack(alignment: .center) {
-            NavigationLink(destination: CredentialsPage(viewModel: CredentialsPageViewModel(type: self.entry.credentialsType)), tag: 1, selection: self.$selection) {
-                RoundedButton(title: "SignIn", isDisabled: false, action: {
-                    if self.entry.isDoctor {
-                        self.entry.credentialsType = CredentialsPageType.doctorLogin
+        NavigationView {
+            VStack(alignment: .center) {
+                Image("animal_house_logo")
+                    .resizable()
+                    .frame(width: 150, height: 150, alignment: .center)
+                    .aspectRatio(1, contentMode: .fill)
+                Text(AppConfig.appName)
+                    .font(.largeTitle)
+                    .foregroundColor(.green)
+                Spacer()
+                NavigationLink(destination: ChooseUserPage(), tag: 1, selection: self.$selection) {
+                    RoundedButton(title: "Sign In", isDisabled: false, action: {
+                        self.entry.isLogin = true
+                        self.selection = 1
+                    })
+                }
+                NavigationLink(destination: ChooseUserPage(), tag: 2, selection: self.$selection) {
+                    RoundedButton(title: "Sign Up", isDisabled: false, action: {
+                        self.entry.isLogin = false
+                        self.selection = 2
+                    })
+                }
+                Button(action: {
+                    let tabView = AHTabbedView()
+                    UIApplication.shared.windows[0].setRootView(rootView: tabView)
+                }) {
+                    ZStack(alignment: .center) {
+                        HStack {
+                            Spacer()
+                            Text("SKIP")
+                            .font(.headline)
+                                .foregroundColor(.gray)
+                            .padding(.horizontal, 50)
+                            .padding(.vertical, 10.0)
+                            Spacer()
+                        }
                     }
-                    else {
-                        self.entry.credentialsType = CredentialsPageType.userLogin
-                    }
-                    self.selection = 1
-                })
-                .padding(.vertical, 10)
-            }
-            NavigationLink(destination: AccessTokenPage(viewModel: AccessTokenViewViewModel(type: self.entry.isDoctor ? AccessTokenType.doctor : AccessTokenType.client)), tag: 2, selection: self.$selection) {
-                RoundedButton(title: "SignUp", isDisabled: false, action: {
-                    if self.entry.isDoctor {
-                        self.entry.credentialsType = CredentialsPageType.doctorSignup
-                    }
-                    else {
-                        self.entry.credentialsType = CredentialsPageType.userSignup
-                    }
-                    self.selection = 2
-                })
+                }
+                .cornerRadius(8.0)
+                .frame(height: 48)
+                .padding(.horizontal, 24)
             }
         }
-        .navigationBarTitle(Text(""), displayMode: .inline)
     }
 }
 

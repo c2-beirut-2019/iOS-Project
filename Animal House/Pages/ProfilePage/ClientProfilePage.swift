@@ -29,58 +29,64 @@ struct ClientProfilePage: View {
     var body: some View {
         ZStack {
             NavigationView {
-                Form {
-                    Section() {
-                        ProfileHeader(finalImage: self.$finalImage, showImagePicker: self.$showImagePicker, avatar: self.viewModel.avatar, userName: self.viewModel.userName)
+                if UserDefaultsManager.shared.isUserLoggedIn() {
+                    Form {
+                        Section() {
+                            ProfileHeader(finalImage: self.$finalImage, showImagePicker: self.$showImagePicker, avatar: self.viewModel.avatar, userName: self.viewModel.userName)
+                        }
+                        Section() {
+                            InputTextField(placeholder: "First Name", value: $firstName)
+                            InputTextField(placeholder: "Last Name", value: $lastName)
+                        }
+                        Section() {
+                            PhoneNumberTextField(mobileNumber: $mobileNumber)
+                        }
+                        Section(header: Text("Date of birth")) {
+                            CustomDatePicker(birthDate: $dateOfBirth)
+                        }
+                        Section(header: Text("Emergency Informations")) {
+                            InputTextField(placeholder: "Emergency Person", value: $emergencyPerson)
+                            PhoneNumberTextField(mobileNumber: $emergencyNumber)
+                        }
+                        RoundedButton(title: "Save", isDisabled: !self.viewModel.validateProfileInput(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber, emergencyPerson: self.emergencyPerson, emergencyNumber: self.emergencyNumber), isLoading: self.isButtonLoading, action: {
+                            self.isButtonLoading = true
+                            self.viewModel.updateProfile(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber, dob: self.dateOfBirth, emergencyPerson: self.emergencyPerson, emergencyNumber: self.emergencyNumber, avatar: self.finalImage != nil ? self.chosenimage : nil)
+                            })
                     }
-                    Section() {
-                        InputTextField(placeholder: "First Name", value: $firstName)
-                        InputTextField(placeholder: "Last Name", value: $lastName)
-                    }
-                    Section() {
-                        PhoneNumberTextField(mobileNumber: $mobileNumber)
-                    }
-                    Section(header: Text("Date of birth")) {
-                        CustomDatePicker(birthDate: $dateOfBirth)
-                    }
-                    Section(header: Text("Emergency Informations")) {
-                        InputTextField(placeholder: "Emergency Person", value: $emergencyPerson)
-                        PhoneNumberTextField(mobileNumber: $emergencyNumber)
-                    }
-                    RoundedButton(title: "Save", isDisabled: !self.viewModel.validateProfileInput(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber, emergencyPerson: self.emergencyPerson, emergencyNumber: self.emergencyNumber), isLoading: self.isButtonLoading, action: {
-                        self.isButtonLoading = true
-                        self.viewModel.updateProfile(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber, dob: self.dateOfBirth, emergencyPerson: self.emergencyPerson, emergencyNumber: self.emergencyNumber, avatar: self.finalImage != nil ? self.chosenimage : nil)
+                    .navigationBarTitle(self.viewModel.title)
+                    .navigationBarItems(trailing:
+                        Button(action: {
+                            AppDelegate.sharedDelegate().logout()
+                        }) {
+                            Text("Logout")
                         })
-                }
-                .navigationBarTitle(self.viewModel.title)
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        let entry = Entry()
-                        let letsStartPage = LetsStartPage().environmentObject(entry)
-                        UIApplication.shared.windows[0].setRootView(rootView: letsStartPage)
-                    }) {
-                        Text("Logout")
+                    .onReceive(self.viewModel.objectWillChange) { (userProfile) in
+                        self.isButtonLoading = false
+                        
+                        self.firstName = self.viewModel.firstName
+                        self.lastName = self.viewModel.lastName
+                        self.mobileNumber = self.viewModel.mobileNumber
+                        self.dateOfBirth = self.viewModel.birthDate
+                        self.emergencyPerson = self.viewModel.emegencyPerson
+                        self.emergencyNumber = self.viewModel.emegencyPersonPhoneNumber
+                    }
+                    .sheet(isPresented: $showImageEditor, content: {
+                        RGImageEditor(isShown: self.$showImageEditor, inputImage: self.chosenimage, outputImage: self.$finalImage).edgesIgnoringSafeArea(.all)
                     })
-                .onReceive(self.viewModel.objectWillChange) { (userProfile) in
-                    self.isButtonLoading = false
-                    
-                    self.firstName = self.viewModel.firstName
-                    self.lastName = self.viewModel.lastName
-                    self.mobileNumber = self.viewModel.mobileNumber
-                    self.dateOfBirth = self.viewModel.birthDate
-                    self.emergencyPerson = self.viewModel.emegencyPerson
-                    self.emergencyNumber = self.viewModel.emegencyPersonPhoneNumber
                 }
-                .sheet(isPresented: $showImageEditor, content: {
-                    RGImageEditor(isShown: self.$showImageEditor, inputImage: self.chosenimage, outputImage: self.$finalImage).edgesIgnoringSafeArea(.all)
-                })
+                else {
+                    FeaturePermission()
+                    Spacer()
+                }
             }
             .onAppear {
                 guard !self.viewModel.didAppear else {
                     return
                 }
                 self.viewModel.didAppear = true
-                self.viewModel.getProfile()
+                if UserDefaultsManager.shared.isUserLoggedIn() {
+                    self.viewModel.getProfile()
+                }
             }
             .sheet(isPresented: $showImagePicker, content: {
                 RGImagePicker(isShown: self.$showImagePicker, isShowEditor: self.$showImageEditor, image: self.$chosenimage).edgesIgnoringSafeArea(.all)

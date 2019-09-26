@@ -16,16 +16,32 @@ struct ChooseUserPage: View {
 
     var body: some View {
         VStack(alignment: .center) {
-            NavigationLink(destination: SignInUp(), tag: 1, selection: self.$selection) {
+            NavigationLink(destination: ContainerCredentialsView(), tag: 1, selection: self.$selection) {
                 RoundedButton(title: "Doctor", isDisabled: false, action: {
                     self.entry.isDoctor = true
+                    
+                    if self.entry.isLogin {
+                        self.entry.credentialsType = CredentialsPageType.doctorLogin
+                    }
+                    else {
+                        self.entry.credentialsType = CredentialsPageType.doctorSignup
+                    }
+                    
                     self.selection = 1
                 })
                 .padding(.vertical, 10)
             }
-            NavigationLink(destination: SignInUp(), tag: 2, selection: self.$selection) {
+            NavigationLink(destination: ContainerCredentialsView(), tag: 2, selection: self.$selection) {
                 RoundedButton(title: "Client", isDisabled: false, action: {
                     self.entry.isDoctor = false
+                    
+                    if self.entry.isLogin {
+                        self.entry.credentialsType = CredentialsPageType.userLogin
+                    }
+                    else {
+                        self.entry.credentialsType = CredentialsPageType.userSignup
+                    }
+                    
                     self.selection = 2
                 })
             }

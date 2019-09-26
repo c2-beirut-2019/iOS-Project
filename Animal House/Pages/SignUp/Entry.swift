@@ -11,6 +11,7 @@ import Combine
 
 class Entry: ObservableObject {
     var isDoctor = false
+    var isLogin = false
     var credentialsType: CredentialsPageType = .doctorLogin
     var accessToken: String = "pNlimG"
     var isSkip = false
