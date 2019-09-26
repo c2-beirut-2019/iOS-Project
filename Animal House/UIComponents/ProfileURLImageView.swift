@@ -15,7 +15,7 @@ struct ProfileURLImageView: View {
     var localImage: Image?
     
     var body: some View {
-        URLImage(URL(string: serverImage!) ?? URL(string: "https://www.apple.com")!, placeholder: Image(systemName: "circle"))
+        URLImage(URL(string: serverImage!) ?? URL(string: "https://www.apple.com")!, placeholder: Image("profilepic").resizable(capInsets: .init(top: 0, leading: 0, bottom: 0, trailing: 0), resizingMode: .stretch))
         .frame(width: 100, height: 100, alignment: .center)
         .clipShape(Circle())
         .overlay(Circle().stroke(Color.white, lineWidth: 4))

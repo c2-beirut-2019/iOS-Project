@@ -16,9 +16,9 @@ struct SignInUp: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
-                Image("animal_house_logo")
+                Image("heartPaw")
                     .resizable()
-                    .frame(width: 150, height: 150, alignment: .center)
+                    .frame(width: 150, height: 115, alignment: .center)
                     .aspectRatio(1, contentMode: .fill)
                 Text(AppConfig.appName)
                     .font(.largeTitle)

@@ -15,39 +15,40 @@ struct AHTabbedView: View {
             TabView {
                 NewsListPage(viewModel: NewsListViewViewModel())
                 .tabItem {
-                    Image(systemName: "1.square.fill")
+                    Image("news")
                     Text("News")
                 }
                 PetsToAdoptListPage(viewModel: PetsToAdoptListViewModel())
                 .tabItem {
-                    Image(systemName: "2.square.fill")
+                    Image("dog")
                     Text("Pets")
                 }
                 DoctorsListPage(viewModel: DoctorsListViewViewModel())
                 .tabItem {
-                    Image(systemName: "3.square.fill")
+                    Image("doc")
                     Text("Doctors")
                 }
                 AppointmentsListPage(viewModel: ApointmentsListViewViewModel())
                 .tabItem {
-                    Image(systemName: "4.square.fill")
+                    Image("calendar")
                     Text("Appointments")
                 }
                 if UserDefaultsManager.shared.isUserADoctor() {
                     DoctorProfilePage(viewModel: DoctorPageViewModel())
                     .tabItem {
-                        Image(systemName: "5.square.fill")
+                        Image("profile")
                         Text("My Profile")
                     }
                 }
                 else {
                     ClientProfilePage(viewModel: ProfilePageViewModel())
                     .tabItem {
-                        Image(systemName: "5.square.fill")
+                        Image("profile")
                         Text("My Profile")
                     }
                 }
             }
+            .accentColor(.green)
             .edgesIgnoringSafeArea(.top)
      }
 }

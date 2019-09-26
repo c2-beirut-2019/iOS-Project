@@ -27,7 +27,7 @@ struct NewDetailsPage: View {
                         Spacer()
                     }
                     .padding(10)
-                    URLImage(URL(string: self.news.image)!, placeholder: Image(systemName: "circle"))
+                    URLImage(URL(string: self.news.image)!, placeholder: Image("logoPlaceholder").resizable(capInsets: .init(top: 0, leading: 0, bottom: 0, trailing: 0), resizingMode: .stretch))
                         .resizable()
                         .clipped()
                         .aspectRatio(2, contentMode: .fill)

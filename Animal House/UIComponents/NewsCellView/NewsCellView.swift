@@ -16,7 +16,7 @@ struct NewsCellView: View {
     var body: some View {
         NavigationLink(destination: NewDetailsPage(news: self.newsCellModel)) {
             HStack(alignment: .top) {
-                URLImage(URL(string: newsCellModel.image)!, placeholder: Image(systemName: "circle"))
+                URLImage(URL(string: newsCellModel.image)!, placeholder: Image("squarelogogplaceholder").resizable(capInsets: .init(top: 0, leading: 0, bottom: 0, trailing: 0), resizingMode: .stretch))
                     .resizable()
                     .frame(width: 90, height: 90)
                     .padding(.vertical, 8)
