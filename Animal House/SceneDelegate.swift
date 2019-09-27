@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
             else {
                 let entry = Entry()
-                window.rootViewController = UIHostingController(rootView: SignInUp().environmentObject(entry))
+                window.rootViewController = UIHostingController(rootView: ProductsListPage(viewModel: ProductListViewModel()).environmentObject(entry))
             }
             self.window = window
             window.makeKeyAndVisible()
