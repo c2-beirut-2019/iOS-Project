@@ -58,7 +58,7 @@ struct ClientProfilePage: View {
                         Button(action: {
                             AppDelegate.sharedDelegate().logout()
                         }) {
-                            Text("Logout")
+                            Text("Logout").bold()
                         })
                     .onReceive(self.viewModel.objectWillChange) { (userProfile) in
                         self.isButtonLoading = false

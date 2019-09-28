@@ -59,6 +59,11 @@ struct PetsToAdoptListPage: View {
                     }
                 }
             }
+            .navigationBarItems(trailing:
+                NavigationLink(destination: ProductsListPage(viewModel: ProductListViewModel())) {
+                    Text("Products").bold()
+                }
+            )
         }
         .onAppear {
             guard !self.viewModel.didAppear else {

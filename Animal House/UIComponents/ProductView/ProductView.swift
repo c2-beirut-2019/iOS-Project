@@ -22,14 +22,15 @@ struct ProductView: View {
                 .frame(width: size.width, height: size.width)
                 .aspectRatio(1, contentMode: .fill)
             Text(self.productViewModel.title)
+            .frame(width: size.width, alignment: .center)
             .lineLimit(1)
             .padding(.vertical, 5)
             .padding(.horizontal, 5)
             Text(self.productViewModel.price)
+            .frame(width: size.width, alignment: .center)
             .lineLimit(1)
         }
         .cornerRadius(10)
-        .scaledToFit()
         .shadow(radius: 10)
     }
 }

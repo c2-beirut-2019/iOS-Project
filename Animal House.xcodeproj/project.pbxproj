@@ -308,9 +308,9 @@
 			children = (
 				A43F272E22FA2BF700F21B70 /* SignUp */,
 				A4632145230365280063B9F9 /* AHTabbedView.swift */,
-				A44527F9233D7CC1000FAFC4 /* ProductsListPage */,
 				A4B0F513230DECEC00E902A9 /* News */,
 				A4B0F518230DEE1000E902A9 /* PetsToAdoptListPage */,
+				A4751F4C233E783F0017DC56 /* Products */,
 				A4A8D6F7231DC3CE0045193E /* DoctorsListPage */,
 				A4B94EA7232FFEE700952520 /* AppointmentsListPage */,
 				A46C6617230F50180071D5B6 /* ProfilePage */,
@@ -336,9 +336,9 @@
 				A436416F233D846800840621 /* ProductView */,
 				A4514D08233C34490082C79B /* FeaturePermission.swift */,
 				A423E5B72330B0C000287E4D /* RGPagingScrollView.swift */,
-				A4D0B467230F72BB00EE9A35 /* RGImagePicker.swift */,
 				A449EF922321875700887207 /* ProfileHeader.swift */,
 				A454D9AE2311F31700C84352 /* RGImageEditor.swift */,
+				A4D0B467230F72BB00EE9A35 /* RGImagePicker.swift */,
 				A4507D75232F23CE003BBE59 /* RGCalendar.swift */,
 				A454D9B223133CAE00C84352 /* RGActivityIndicator.swift */,
 				A48EB7D12308536200B69ACB /* LoadingRow.swift */,
@@ -486,6 +486,14 @@
 				A427611B2321836E002E9254 /* DoctorPageViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4751F4C233E783F0017DC56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A44527F9233D7CC1000FAFC4 /* ProductsListPage */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		A48B04F6230DE47200C86B7C /* NewsCellView */ = {
