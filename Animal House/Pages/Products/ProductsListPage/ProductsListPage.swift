@@ -13,22 +13,24 @@ struct ProductsListPage: View {
     @ObservedObject var viewModel: ProductListViewModel
 
     var body: some View {
-        ScrollView() {
-            GeometryReader { geometry in
-                ForEach(0..<self.viewModel.products.count, id: \.self) { productsPair in
-                    HStack(alignment: .center) {
-                        Spacer()
-                        ForEach(self.viewModel.products[productsPair], id: \.self) { product in
-                            ProductView(size: CGSize(width: (geometry.size.width-40)/2, height: (geometry.size.width-40)/2 + 40), productViewModel: product)
-                                .padding(.vertical, 10)
+        GeometryReader { geometry in
+            ScrollView() {
+                VStack {
+                    ForEach(0..<self.viewModel.products.count, id: \.self) { productsPair in
+                        HStack(alignment: .center) {
+                            Spacer()
+                            ForEach(self.viewModel.products[productsPair], id: \.self) { product in
+                                ProductView(size: CGSize(width: (geometry.size.width-40)/2, height: (geometry.size.width-40)/2 + 40), productViewModel: product)
+                                    .padding(.vertical, 10)
+                            }
+                            Spacer()
                         }
-                        Spacer()
                     }
-                }
-                if !self.viewModel.isEndPagination {
-                    LoadingRow(isLoading: true).onAppear {
-                        if !self.viewModel.isLoading {
-                            self.viewModel.getProducts(isPage: true)
+                    if !self.viewModel.isEndPagination {
+                        LoadingRow(isLoading: true).onAppear {
+                            if !self.viewModel.isLoading {
+                                self.viewModel.getProducts(isPage: true)
+                            }
                         }
                     }
                 }

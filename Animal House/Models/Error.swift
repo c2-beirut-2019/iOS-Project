@@ -17,21 +17,25 @@ let AUTHENTICATION_FAILED = "AUTHENTICATION_FAILED"
 
 class Error400: Error, Codable {
     
-    let code : String?
-    let message : String?
-    let source: String?
-    
+    let field : [String]?
+    let location : String?
+    let messages : [String]?
+    let types : [String]?
+
     enum CodingKeys: String, CodingKey {
-        case code = "code"
-        case message = "message"
-        case source = "source"
+
+        case field = "field"
+        case location = "location"
+        case messages = "messages"
+        case types = "types"
     }
-    
+
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        code = try values.decodeIfPresent(String.self, forKey: .code)
-        message = try values.decodeIfPresent(String.self, forKey: .message)
-        source = try values.decodeIfPresent(String.self, forKey: .source)
+        field = try values.decodeIfPresent([String].self, forKey: .field)
+        location = try values.decodeIfPresent(String.self, forKey: .location)
+        messages = try values.decodeIfPresent([String].self, forKey: .messages)
+        types = try values.decodeIfPresent([String].self, forKey: .types)
     }
     
 }

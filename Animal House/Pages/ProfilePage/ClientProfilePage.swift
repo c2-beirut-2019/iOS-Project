@@ -51,7 +51,7 @@ struct ClientProfilePage: View {
                         RoundedButton(title: "Save", isDisabled: !self.viewModel.validateProfileInput(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber, emergencyPerson: self.emergencyPerson, emergencyNumber: self.emergencyNumber), isLoading: self.isButtonLoading, action: {
                             self.isButtonLoading = true
                             self.viewModel.updateProfile(firstName: self.firstName, lastName: self.lastName, mobileNumber: self.mobileNumber, dob: self.dateOfBirth, emergencyPerson: self.emergencyPerson, emergencyNumber: self.emergencyNumber, avatar: self.finalImage != nil ? self.chosenimage : nil)
-                            })
+                        })
                     }
                     .navigationBarTitle(self.viewModel.title)
                     .navigationBarItems(trailing:

@@ -11,7 +11,7 @@ import Foundation
 struct DoctorCellViewViewModel: Identifiable {
 
     let id = UUID()
-    fileprivate var doctorModel: Doctor!
+    var doctorModel: Doctor!
     
     init(doctorModel: Doctor) {
         self.doctorModel = doctorModel

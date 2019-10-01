@@ -11,7 +11,7 @@ import Foundation
 struct PetAdoptCellViewViewModel: Identifiable {
 
     let id = UUID()
-    fileprivate var petModel: PetModel!
+    var petModel: PetModel!
     
     init(petModel: PetModel) {
         self.petModel = petModel

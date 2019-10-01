@@ -97,7 +97,7 @@ class NetworkManager: NSObject {
                         do {
                             let apiResponse = try JSONDecoder().decode(ErrorModal.self, from: responseData)
                             let err : Error400 = apiResponse.error![0];
-                            return resolver(.failure(NSError(domain: "", code: Int(err.code!) ?? unProcessedCall, userInfo: [NSLocalizedDescriptionKey: (err.message ??  NetworkResponse.unknownError.rawValue)])))
+                            return resolver(.failure(NSError(domain: "", code: unProcessedCall, userInfo: [NSLocalizedDescriptionKey: (err.messages![0])])))
                         } catch {
                             print(error)
                             return resolver(.failure(NSError(domain: "", code: unabletoDecodeErrorCode, userInfo: [NSLocalizedDescriptionKey: NetworkResponse.unableToDecode.rawValue])))

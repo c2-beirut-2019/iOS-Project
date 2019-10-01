@@ -11,29 +11,53 @@ import Combine
 
 struct DoctorsListPage: View {
     
+    @EnvironmentObject var shared: ReserveAppointmentViewModel
     @ObservedObject var viewModel: DoctorsListViewViewModel
+    
+    var isReservation: Bool = false
+    
+    @Binding var selectedDoctor: String
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(self.viewModel.doctors) { doctor in
-                    DoctorCellView(doctorCellModel: doctor)
+        VStack {
+            if isReservation {
+                List {
+                    ForEach(self.viewModel.doctors) { doctor in
+                        Button(action: {
+                            self.shared.doctor = doctor.doctorModel
+                            self.$selectedDoctor.wrappedValue = doctor.fullName
+                        }) {
+                            DoctorCellView(doctorCellModel: doctor)
+                                .accentColor(.black)
+                        }
+                    }
+                }
+                .navigationBarTitle(Text(self.viewModel.title))
+                .onAppear {
+                    guard !self.viewModel.didAppear else {
+                        return
+                    }
+                    self.viewModel.didAppear = true
+                    self.viewModel.getDoctors()
                 }
             }
-            .navigationBarTitle(Text(self.viewModel.title))
-        }
-        .onAppear {
-            guard !self.viewModel.didAppear else {
-                return
+            else {
+                NavigationView {
+                    List {
+                        ForEach(self.viewModel.doctors) { doctor in
+                            DoctorCellView(doctorCellModel: doctor)
+                        }
+                    }
+                    .navigationBarTitle(Text(self.viewModel.title))
+                }
+                .onAppear {
+                    guard !self.viewModel.didAppear else {
+                        return
+                    }
+                    self.viewModel.didAppear = true
+                    self.viewModel.getDoctors()
+                }
             }
-            self.viewModel.didAppear = true
-            self.viewModel.getDoctors()
         }
-    }
-}
-
-struct DoctorsListPage_Previews: PreviewProvider {
-    static var previews: some View {
-        DoctorsListPage(viewModel: DoctorsListViewViewModel())
     }
 }

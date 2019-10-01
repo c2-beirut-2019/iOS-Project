@@ -11,6 +11,8 @@ import SwiftUI
 struct AHTabbedView: View {
     @State private var selection = 1
      
+    @State var selectedDoctor = ""
+    
      var body: some View {
             TabView {
                 NewsListPage(viewModel: NewsListViewViewModel())
@@ -23,7 +25,7 @@ struct AHTabbedView: View {
                     Image("dog")
                     Text("Pets")
                 }
-                DoctorsListPage(viewModel: DoctorsListViewViewModel())
+                DoctorsListPage(viewModel: DoctorsListViewViewModel(), selectedDoctor: self.$selectedDoctor)
                 .tabItem {
                     Image("doc")
                     Text("Doctors")

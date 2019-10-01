@@ -46,6 +46,11 @@ struct AppointmentsListPage: View {
                 }
             }
             .navigationBarTitle(Text(self.viewModel.title), displayMode: .inline)
+            .navigationBarItems(trailing:
+                NavigationLink(destination: ReserveAppointmentPage().environmentObject(ReserveAppointmentViewModel())) {
+                    Text("+").bold()
+                }
+            )
         }
         .onAppear {
             guard !self.viewModel.didAppear else {
