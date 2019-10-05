@@ -44,43 +44,12 @@ Combine et SwiftUI sont introduits dans la Conférence mondiale des développeur
 Swift est un langage de programmation compilé multi-paradigme et polyvalent développé par Apple Inc. pour iOS, iPadOS, macOS, watchOS, tvOS, Linux et z/OS. Swift est conçu pour fonctionner avec les frameworks Apple Cocoa et Cocoa Touch et avec le vaste corpus de code Objective-C existant écrit pour les produits Apple. Il est construit avec le framework de compilateur LLVM open source et est inclus dans Xcode depuis la version 6, publiée en 2014. Sur les plateformes Apple, il utilise la bibliothèque d'exécution Objective-C qui permet l'utilisation de C, Objective-C, C ++ et Swift. code à exécuter dans un programme.
 Apple souhaitait que Swift prenne en charge de nombreux concepts de base associés à Objective-C, notamment la répartition dynamique, la liaison tardive généralisée, la programmation extensible et des fonctionnalités similaires, mais de manière "plus sûre", facilitant ainsi la détection des bogues logiciels; Swift propose des fonctionnalités permettant de corriger certaines erreurs de programmation courantes telles que le déréférencement de pointeur null et fournit un sucre syntaxique permettant d'éviter la pyramide du destin. Swift prend en charge le concept d'extensibilité de protocole, un système d'extensibilité qui peut être appliqué à des types, des structures et des classes, préconisé par Apple comme étant un véritable changement dans les paradigmes de programmation qu'ils appellent "programmation orientée protocole" (similaire aux traits).
 
+> Architecture logicielle: MVVM
 
+![](MVVM.png)
 
+MVVM facilite la séparation du développement de l'interface utilisateur graphique - que ce soit via un langage de balisage ou un code d'interface graphique - du développement de la logique métier ou de la logique de back-end (modèle de données). Le modèle de vue de MVVM est un convertisseur de valeur, ce qui signifie que le modèle de vue est chargé d'exposer (convertir) les objets de données à partir du modèle de manière à ce que les objets soient facilement gérés et présentés. À cet égard, le modèle de vue est plus modèle que vue et gère la plupart sinon la totalité de la logique d'affichage de la vue. Le modèle de vue peut implémenter un motif de médiateur, organisant l'accès à la logique dorsale autour de l'ensemble des cas d'utilisation pris en charge par la vue.
 
+MVVM est une variante du modèle de conception Presentation Model de Martin Fowler. MVVM résume de la même manière l'état et le comportement d'une vue, mais un modèle de présentation résume une vue (crée un modèle de vue) de manière indépendante d'une plate-forme d'interface utilisateur spécifique.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+MVVM a été inventé par Ken Cooper et Ted Peters, architectes de Microsoft, dans le but de simplifier la programmation d'interfaces utilisateur pilotée par les événements. Le modèle a été intégré à Windows Presentation Foundation (WPF) (système graphique .NET de Microsoft) et à Silverlight (application dérivée d'applications Internet de WPF). John Gossman, l'un des architectes WPF et Silverlight de Microsoft, a annoncé MVVM sur son blog en 2005.
